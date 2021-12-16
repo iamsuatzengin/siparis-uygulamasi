@@ -68,6 +68,11 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Siparis.cs" />
+    <Compile Include="SiparisDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="SiparisDetayi.cs" />
     <Compile Include="SqlBaglanti.cs" />
     <Compile Include="User.cs" />
@@ -99,6 +104,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="SiparisDataSet.xsc">
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SiparisDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SiparisDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SiparisDataSet.xss">
+      <DependentUpon>SiparisDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
