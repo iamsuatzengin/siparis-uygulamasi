@@ -10,3 +10,15 @@ C:\Users\Suat\Desktop\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOto
 C:\Users\Suat\Desktop\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.pdb
 C:\Users\Suat\Desktop\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.AnaMenuForm.resources
 C:\Users\Suat\Desktop\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.MusteriListeForm.resources
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\bin\Debug\SiparisOtomasyonu.exe.config
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\bin\Debug\SiparisOtomasyonu.exe
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\bin\Debug\SiparisOtomasyonu.pdb
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.csproj.AssemblyReference.cache
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.AnaMenuForm.resources
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.GirisForm.resources
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.MusteriListeForm.resources
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.Properties.Resources.resources
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.csproj.GenerateResource.cache
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.csproj.CoreCompileInputs.cache
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.exe
+C:\Users\kxx\Source\Repos\siparis-uygulamasi\Sipariş Otomasyonu\SiparisOtomasyonu\obj\Debug\SiparisOtomasyonu.pdb

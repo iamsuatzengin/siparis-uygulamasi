@@ -42,23 +42,34 @@ namespace SiparisOtomasyonu
         }
         private void yoneticiGiris()
         {
-            SqlCommand komut = new SqlCommand("SELECT * FROM yonetici_tablo WHERE kullanici_adi=@k_ad AND sifre=@sifre", sqlBaglanti.connection());
+            SqlCommand komut = new SqlCommand("SELECT * FROM yonetici_table WHERE kullanici_adi=@k_ad AND sifre=@sifre", sqlBaglanti.connection());
             komut.Parameters.AddWithValue("@k_ad", tbKullaniciAdi.Text);
             komut.Parameters.AddWithValue("@sifre", tbSifre.Text);
 
             SqlDataReader dataReader = komut.ExecuteReader();
-            if (dataReader.Read())
+            girisOnaylama(dataReader);
+            sqlBaglanti.connection().Close();
+        }
+        private void girisOnaylama(SqlDataReader dataReader)
+        {
+            if (tbKullaniciAdi.Text == "" || tbSifre.Text == "")
             {
-                MessageBox.Show("giris basarili" );
-
+                MessageBox.Show("Basarisiz ");
             }
             else
             {
-                MessageBox.Show("Basarisiz");
-            }
-            sqlBaglanti.connection().Close();
-        }
+                if (dataReader.Read())
+                {
+                    AnaMenuForm anaMenuForm = new AnaMenuForm();
+                    anaMenuForm.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Basarisiz ");
+                }
 
+            }
+        }
         private void musteriGiris()
         {
             SqlCommand komut = new SqlCommand("SELECT * FROM musteri_tablo WHERE kullanici_adi=@k_ad AND sifre=@sifre", sqlBaglanti.connection());
@@ -67,37 +78,55 @@ namespace SiparisOtomasyonu
 
             SqlDataReader dataReader = komut.ExecuteReader();
 
-            if (dataReader.Read())
-            {
-                MessageBox.Show("giris basarili - müşteri");
-            }
-            else
-            {
-                MessageBox.Show("Basarisiz - müşteri");
-            }
+            girisOnaylama(dataReader);
+            
             sqlBaglanti.connection().Close();
 
         }
         private void yoneticiKayit()
         {
-            string sorgu = "INSERT INTO yonetici_tablo (kullanici_adi, sifre) values (@k_ad, @sifre)";
-            SqlCommand komut = new SqlCommand(sorgu, sqlBaglanti.connection());
-            komut.Parameters.AddWithValue("@k_ad", tbKullaniciAdiKayit.Text);
-            komut.Parameters.AddWithValue("@sifre", tbSifreKayit.Text);
 
-            komut.ExecuteNonQuery();
-            sqlBaglanti.connection().Close();
+            if (tbKullaniciAdiKayit.Text == "" || tbSifreKayit.Text == "")
+            {
+                MessageBox.Show("Basarisiz ");
+            }
+            else
+            {
+                string sorgu = "INSERT INTO yonetici_table (kullanici_adi, sifre) values (@k_ad, @sifre)";
+                SqlCommand komut = new SqlCommand(sorgu, sqlBaglanti.connection());
+                komut.Parameters.AddWithValue("@k_ad", tbKullaniciAdiKayit.Text);
+                komut.Parameters.AddWithValue("@sifre", tbSifreKayit.Text);
+
+                komut.ExecuteNonQuery();
+                sqlBaglanti.connection().Close();
+                AnaMenuForm anaMenuForm = new AnaMenuForm();
+                anaMenuForm.Show();
+                this.Hide();
+            }
+            
+            
         }
         private void musteriKayit()
         {
-            musteri.ad = tbAd.Text;
-            musteri.soyad = tbSoyad.Text;
-            musteri.adres = tbAdres.Text;
-            musteri.telefon = tbTelefon.Text;
-            musteri.kullaniciAdi = tbKullaniciAdiKayit.Text;
-            musteri.sifre = tbSifreKayit.Text;
+            if (tbAd.Text == "" || tbSoyad.Text == "" || tbAdres.Text == "" || tbTelefon.Text == "" || tbKullaniciAdiKayit.Text == "" || tbSifreKayit.Text == "") {
+                MessageBox.Show("alanlar boş bırakılamaz!!");
 
-            musteri.musteriKayit();
+            }
+            else
+            {
+                musteri.ad = tbAd.Text;
+                musteri.soyad = tbSoyad.Text;
+                musteri.adres = tbAdres.Text;
+                musteri.telefon = tbTelefon.Text;
+                musteri.kullaniciAdi = tbKullaniciAdiKayit.Text;
+                musteri.sifre = tbSifreKayit.Text;
+
+                musteri.musteriKayit();
+                AnaMenuForm anaMenuForm = new AnaMenuForm();
+                anaMenuForm.Show();
+                this.Hide();
+            }
+            
         }
         
         private void btnGiris_Click(object sender, EventArgs e)
@@ -106,15 +135,10 @@ namespace SiparisOtomasyonu
             if(rbYoneticiGiris.Checked == true)
             {
                 yoneticiGiris();
-                AnaMenuForm anaMenuForm = new AnaMenuForm();
-               
-                anaMenuForm.Show();
             }
             else
             {
-                musteriGiris();
-                AnaMenuForm anaMenuForm = new AnaMenuForm();
-                anaMenuForm.Show();
+                musteriGiris();   
             }
         }
 
