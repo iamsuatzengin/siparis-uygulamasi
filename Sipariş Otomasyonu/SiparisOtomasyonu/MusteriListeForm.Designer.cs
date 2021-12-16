@@ -1,4 +1,5 @@
 ﻿
+
 namespace SiparisOtomasyonu
 {
     partial class MusteriListeForm
