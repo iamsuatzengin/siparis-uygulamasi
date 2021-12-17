@@ -29,23 +29,29 @@ namespace SiparisOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSepeteEkle = new System.Windows.Forms.Button();
+            System.Windows.Forms.Button btnUrunEkle;
             this.label1 = new System.Windows.Forms.Label();
             this.btnMusteriListe = new System.Windows.Forms.Button();
-            this.btnSiparislerim = new System.Windows.Forms.Button();
-            this.btnSepet = new System.Windows.Forms.Button();
+            this.btnUrunCikar = new System.Windows.Forms.Button();
             this.listViewUrunler = new System.Windows.Forms.ListView();
+            this.stnId = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnGuncelle = new System.Windows.Forms.Button();
+            btnUrunEkle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnSepeteEkle
+            // btnUrunEkle
             // 
-            this.btnSepeteEkle.Location = new System.Drawing.Point(1252, 641);
-            this.btnSepeteEkle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSepeteEkle.Name = "btnSepeteEkle";
-            this.btnSepeteEkle.Size = new System.Drawing.Size(181, 53);
-            this.btnSepeteEkle.TabIndex = 0;
-            this.btnSepeteEkle.Text = "Sepete Ekle";
-            this.btnSepeteEkle.UseVisualStyleBackColor = true;
+            btnUrunEkle.Location = new System.Drawing.Point(33, 79);
+            btnUrunEkle.Margin = new System.Windows.Forms.Padding(4);
+            btnUrunEkle.Name = "btnUrunEkle";
+            btnUrunEkle.Size = new System.Drawing.Size(267, 55);
+            btnUrunEkle.TabIndex = 0;
+            btnUrunEkle.Text = "Ürün Ekle";
+            btnUrunEkle.UseVisualStyleBackColor = true;
+            btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // label1
             // 
@@ -59,8 +65,8 @@ namespace SiparisOtomasyonu
             // 
             // btnMusteriListe
             // 
-            this.btnMusteriListe.Location = new System.Drawing.Point(33, 164);
-            this.btnMusteriListe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMusteriListe.Location = new System.Drawing.Point(33, 567);
+            this.btnMusteriListe.Margin = new System.Windows.Forms.Padding(4);
             this.btnMusteriListe.Name = "btnMusteriListe";
             this.btnMusteriListe.Size = new System.Drawing.Size(267, 53);
             this.btnMusteriListe.TabIndex = 0;
@@ -68,60 +74,93 @@ namespace SiparisOtomasyonu
             this.btnMusteriListe.UseVisualStyleBackColor = true;
             this.btnMusteriListe.Click += new System.EventHandler(this.btnMusteriListe_Click);
             // 
-            // btnSiparislerim
+            // btnUrunCikar
             // 
-            this.btnSiparislerim.Location = new System.Drawing.Point(33, 79);
-            this.btnSiparislerim.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSiparislerim.Name = "btnSiparislerim";
-            this.btnSiparislerim.Size = new System.Drawing.Size(267, 55);
-            this.btnSiparislerim.TabIndex = 0;
-            this.btnSiparislerim.Text = "Ürün Ekle";
-            this.btnSiparislerim.UseVisualStyleBackColor = true;
-            // 
-            // btnSepet
-            // 
-            this.btnSepet.Location = new System.Drawing.Point(33, 244);
-            this.btnSepet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnSepet.Name = "btnSepet";
-            this.btnSepet.Size = new System.Drawing.Size(267, 53);
-            this.btnSepet.TabIndex = 3;
-            this.btnSepet.Text = "Sepet";
-            this.btnSepet.UseVisualStyleBackColor = true;
+            this.btnUrunCikar.Location = new System.Drawing.Point(33, 249);
+            this.btnUrunCikar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUrunCikar.Name = "btnUrunCikar";
+            this.btnUrunCikar.Size = new System.Drawing.Size(267, 53);
+            this.btnUrunCikar.TabIndex = 3;
+            this.btnUrunCikar.Text = "Ürün Çıkar";
+            this.btnUrunCikar.UseVisualStyleBackColor = true;
+            this.btnUrunCikar.Click += new System.EventHandler(this.btnUrunCikar_Click);
             // 
             // listViewUrunler
             // 
+            this.listViewUrunler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stnId,
+            this.stnUrunAdi,
+            this.stnUrunMiktari,
+            this.stnUrunAdedi});
+            this.listViewUrunler.FullRowSelect = true;
             this.listViewUrunler.HideSelection = false;
             this.listViewUrunler.Location = new System.Drawing.Point(367, 79);
-            this.listViewUrunler.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewUrunler.Margin = new System.Windows.Forms.Padding(4);
             this.listViewUrunler.Name = "listViewUrunler";
             this.listViewUrunler.Size = new System.Drawing.Size(1065, 541);
             this.listViewUrunler.TabIndex = 4;
             this.listViewUrunler.UseCompatibleStateImageBehavior = false;
+            this.listViewUrunler.View = System.Windows.Forms.View.Details;
+            this.listViewUrunler.SelectedIndexChanged += new System.EventHandler(this.listViewUrunler_SelectedIndexChanged);
+            // 
+            // stnId
+            // 
+            this.stnId.Text = "Sıra";
+            this.stnId.Width = 100;
+            // 
+            // stnUrunAdi
+            // 
+            this.stnUrunAdi.Text = "Ürün Adı";
+            this.stnUrunAdi.Width = 400;
+            // 
+            // stnUrunMiktari
+            // 
+            this.stnUrunMiktari.Text = "Ürün Miktarı";
+            this.stnUrunMiktari.Width = 200;
+            // 
+            // stnUrunAdedi
+            // 
+            this.stnUrunAdedi.Text = "Ürün Adedi";
+            this.stnUrunAdedi.Width = 200;
+            // 
+            // btnGuncelle
+            // 
+            this.btnGuncelle.Location = new System.Drawing.Point(33, 413);
+            this.btnGuncelle.Name = "btnGuncelle";
+            this.btnGuncelle.Size = new System.Drawing.Size(267, 51);
+            this.btnGuncelle.TabIndex = 5;
+            this.btnGuncelle.Text = "Güncelle";
+            this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // AnaMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1460, 759);
+            this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.listViewUrunler);
-            this.Controls.Add(this.btnSepet);
+            this.Controls.Add(this.btnUrunCikar);
             this.Controls.Add(this.btnMusteriListe);
-            this.Controls.Add(this.btnSiparislerim);
+            this.Controls.Add(btnUrunEkle);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnSepeteEkle);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AnaMenuForm";
             this.Text = "AnaMenuForm";
+            this.Load += new System.EventHandler(this.AnaMenuForm_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.Button btnSepeteEkle;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnMusteriListe;
-        private System.Windows.Forms.Button btnSiparislerim;
-        private System.Windows.Forms.Button btnSepet;
+        private System.Windows.Forms.Button btnUrunCikar;
         private System.Windows.Forms.ListView listViewUrunler;
+        private System.Windows.Forms.ColumnHeader stnUrunAdi;
+        private System.Windows.Forms.ColumnHeader stnUrunMiktari;
+        private System.Windows.Forms.ColumnHeader stnUrunAdedi;
+        private System.Windows.Forms.ColumnHeader stnId;
+        private System.Windows.Forms.Button btnGuncelle;
     }
 }
