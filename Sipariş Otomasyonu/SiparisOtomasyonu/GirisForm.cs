@@ -60,8 +60,7 @@ namespace SiparisOtomasyonu
             {
                 if (dataReader.Read())
                 {
-                    AnaMenuForm anaMenuForm = new AnaMenuForm();
-                    anaMenuForm.Show();
+                    MessageBox.Show("Basarili");
                 }
                 else
                 {
@@ -122,8 +121,8 @@ namespace SiparisOtomasyonu
                 musteri.sifre = tbSifreKayit.Text;
 
                 musteri.musteriKayit();
-                AnaMenuForm anaMenuForm = new AnaMenuForm();
-                anaMenuForm.Show();
+                AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
+                anaMenuMusteriForm.Show();
                 this.Hide();
             }
             
@@ -135,10 +134,16 @@ namespace SiparisOtomasyonu
             if(rbYoneticiGiris.Checked == true)
             {
                 yoneticiGiris();
+                AnaMenuForm anaMenuForm = new AnaMenuForm();
+                anaMenuForm.Show();
+                this.Hide();
             }
             else
             {
-                musteriGiris();   
+                musteriGiris();
+                AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
+                anaMenuMusteriForm.Show();
+                this.Hide();
             }
         }
 

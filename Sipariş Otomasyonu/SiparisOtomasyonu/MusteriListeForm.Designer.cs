@@ -52,9 +52,10 @@ namespace SiparisOtomasyonu
             this.listViewMusteri.FullRowSelect = true;
             this.listViewMusteri.GridLines = true;
             this.listViewMusteri.HideSelection = false;
-            this.listViewMusteri.Location = new System.Drawing.Point(386, 34);
+            this.listViewMusteri.Location = new System.Drawing.Point(515, 42);
+            this.listViewMusteri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.listViewMusteri.Name = "listViewMusteri";
-            this.listViewMusteri.Size = new System.Drawing.Size(664, 416);
+            this.listViewMusteri.Size = new System.Drawing.Size(884, 511);
             this.listViewMusteri.TabIndex = 0;
             this.listViewMusteri.UseCompatibleStateImageBehavior = false;
             this.listViewMusteri.View = System.Windows.Forms.View.Details;
@@ -91,9 +92,10 @@ namespace SiparisOtomasyonu
             // 
             // btn
             // 
-            this.btn.Location = new System.Drawing.Point(953, 468);
+            this.btn.Location = new System.Drawing.Point(159, 74);
+            this.btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(97, 44);
+            this.btn.Size = new System.Drawing.Size(129, 54);
             this.btn.TabIndex = 1;
             this.btn.Text = "Musteri";
             this.btn.UseVisualStyleBackColor = true;
@@ -101,11 +103,12 @@ namespace SiparisOtomasyonu
             // 
             // MusteriListeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1081, 609);
+            this.ClientSize = new System.Drawing.Size(1441, 750);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.listViewMusteri);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MusteriListeForm";
             this.Text = "MusteriListeForm";
             this.ResumeLayout(false);
