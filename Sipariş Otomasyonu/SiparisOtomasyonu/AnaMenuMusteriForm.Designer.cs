@@ -37,6 +37,8 @@ namespace SiparisOtomasyonu
             this.btnSiparislerim = new System.Windows.Forms.Button();
             this.btnSepeteEkle = new System.Windows.Forms.Button();
             this.btnSepetim = new System.Windows.Forms.Button();
+            this.stnUrunFiyati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblAnaMenu
@@ -53,9 +55,11 @@ namespace SiparisOtomasyonu
             // listViewUrunler
             // 
             this.listViewUrunler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stnID,
             this.stnUrunAdi,
             this.stnUrunMiktari,
-            this.stnUrunAdedi});
+            this.stnUrunAdedi,
+            this.stnUrunFiyati});
             this.listViewUrunler.FullRowSelect = true;
             this.listViewUrunler.HideSelection = false;
             this.listViewUrunler.Location = new System.Drawing.Point(335, 106);
@@ -64,11 +68,12 @@ namespace SiparisOtomasyonu
             this.listViewUrunler.TabIndex = 1;
             this.listViewUrunler.UseCompatibleStateImageBehavior = false;
             this.listViewUrunler.View = System.Windows.Forms.View.Details;
+            this.listViewUrunler.SelectedIndexChanged += new System.EventHandler(this.listViewUrunler_SelectedIndexChanged);
             // 
             // stnUrunAdi
             // 
             this.stnUrunAdi.Text = "Ürün Adı";
-            this.stnUrunAdi.Width = 400;
+            this.stnUrunAdi.Width = 250;
             // 
             // stnUrunMiktari
             // 
@@ -110,6 +115,15 @@ namespace SiparisOtomasyonu
             this.btnSepetim.UseVisualStyleBackColor = true;
             this.btnSepetim.Click += new System.EventHandler(this.btnSepetim_Click);
             // 
+            // stnUrunFiyati
+            // 
+            this.stnUrunFiyati.Text = "Ürün Fiyatı";
+            this.stnUrunFiyati.Width = 100;
+            // 
+            // stnID
+            // 
+            this.stnID.Text = "Sıra";
+            // 
             // AnaMenuMusteriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -138,5 +152,7 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.ColumnHeader stnUrunMiktari;
         private System.Windows.Forms.ColumnHeader stnUrunAdedi;
         private System.Windows.Forms.Button btnSepetim;
+        private System.Windows.Forms.ColumnHeader stnUrunFiyati;
+        private System.Windows.Forms.ColumnHeader stnID;
     }
 }

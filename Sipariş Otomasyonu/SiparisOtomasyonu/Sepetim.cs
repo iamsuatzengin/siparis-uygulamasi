@@ -30,6 +30,10 @@ namespace SiparisOtomasyonu
             siparislerim.Show();
             this.Hide();
 
+            
+
+
         }
+
     }
 }

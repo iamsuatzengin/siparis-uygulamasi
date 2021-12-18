@@ -39,6 +39,7 @@ namespace SiparisOtomasyonu
             this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.stnUrunFiyati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             btnUrunEkle = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -91,7 +92,8 @@ namespace SiparisOtomasyonu
             this.stnId,
             this.stnUrunAdi,
             this.stnUrunMiktari,
-            this.stnUrunAdedi});
+            this.stnUrunAdedi,
+            this.stnUrunFiyati});
             this.listViewUrunler.FullRowSelect = true;
             this.listViewUrunler.HideSelection = false;
             this.listViewUrunler.Location = new System.Drawing.Point(367, 79);
@@ -111,7 +113,7 @@ namespace SiparisOtomasyonu
             // stnUrunAdi
             // 
             this.stnUrunAdi.Text = "Ürün Adı";
-            this.stnUrunAdi.Width = 400;
+            this.stnUrunAdi.Width = 250;
             // 
             // stnUrunMiktari
             // 
@@ -132,6 +134,11 @@ namespace SiparisOtomasyonu
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
+            // 
+            // stnUrunFiyati
+            // 
+            this.stnUrunFiyati.Text = "Ürün Fiyati";
+            this.stnUrunFiyati.Width = 100;
             // 
             // AnaMenuForm
             // 
@@ -162,5 +169,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.ColumnHeader stnUrunAdedi;
         private System.Windows.Forms.ColumnHeader stnId;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.ColumnHeader stnUrunFiyati;
     }
 }
