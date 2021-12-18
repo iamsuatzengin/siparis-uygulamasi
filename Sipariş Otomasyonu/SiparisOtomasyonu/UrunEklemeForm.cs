@@ -36,6 +36,7 @@ namespace SiparisOtomasyonu
                 urun.urunAdi = tbUrunAdi.Text;
                 urun.urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 urun.urunAdeti = Convert.ToInt32(tbUrunAdet.Text);
+                urun.urunFiyati = Convert.ToInt32(tbUrunFiyat.Text);
                 urun.urunGuncelle(this.id);
                 listView.Items.Clear();
                 urun.urunListele(listView);
@@ -45,11 +46,12 @@ namespace SiparisOtomasyonu
                 string urunAdi = tbUrunAdi.Text;
                 int urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 int urunAdedi = Convert.ToInt32(tbUrunAdet.Text);
+                float urunFiyat = Convert.ToInt32(tbUrunFiyat.Text);
 
                 urun.urunAdi = urunAdi;
                 urun.urunMiktari = urunMiktari;
                 urun.urunAdeti = urunAdedi;
-
+                urun.urunFiyati = urunFiyat;
                 urun.urunEkle();
                 listView.Items.Clear();
                 urun.urunListele(listView);
@@ -71,6 +73,7 @@ namespace SiparisOtomasyonu
                     tbUrunAdi.Text = dataReader["urun_adi"].ToString();
                     tbUrunMiktari.Text = dataReader["urun_miktari"].ToString();
                     tbUrunAdet.Text = dataReader["urun_adedi"].ToString();
+                    tbUrunFiyat.Text = dataReader["urun_fiyati"].ToString();
                 }
             }
             else
@@ -78,6 +81,8 @@ namespace SiparisOtomasyonu
                 tbUrunAdi.Text = "";
                 tbUrunMiktari.Text = "";
                 tbUrunAdet.Text = "";
+                tbUrunFiyat.Text = "";
+
             }
             
             baglanti.connection().Close();

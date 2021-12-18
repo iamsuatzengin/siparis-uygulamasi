@@ -10,6 +10,7 @@ namespace SiparisOtomasyonu
     public class Yonetici : User
     {
         
+
         
         
     }

@@ -8,12 +8,13 @@ using System.Windows.Forms;
 
 namespace SiparisOtomasyonu
 {
-    class Urun
+   public  class Urun
     {
         public int id { get; set; }
         public string urunAdi { get; set; }
         public int urunMiktari { get; set; }
         public int urunAdeti { get; set; }
+        public float  urunFiyati { get; set; }
 
         SqlBaglanti baglanti = new SqlBaglanti();
         public void urunListele(ListView listViewUrunler)
@@ -28,20 +29,21 @@ namespace SiparisOtomasyonu
                 ListViewItem item = new ListViewItem(dataReader["id"].ToString());
                 item.SubItems.Add(dataReader["urun_adi"].ToString());
                 item.SubItems.Add(dataReader["urun_miktari"].ToString());
-                
                 item.SubItems.Add(dataReader["urun_adedi"].ToString());
+                item.SubItems.Add(dataReader["urun_fiyati"].ToString());
                 listViewUrunler.Items.Add(item);
             }
             baglanti.connection().Close();
         }
         public void urunEkle()
         {
-            string sorgu = "INSERT INTO urun_detayi (urun_adi, urun_miktari, urun_adedi) values (@adi, @miktar, @adet)";
+            string sorgu = "INSERT INTO urun_detayi (urun_adi, urun_miktari, urun_adedi , urun_fiyati) values (@adi, @miktar, @adet , @fiyat)";
             SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
 
             komut.Parameters.AddWithValue("@adi", urunAdi);
             komut.Parameters.AddWithValue("@miktar", urunMiktari);
             komut.Parameters.AddWithValue("@adet", urunAdeti);
+            komut.Parameters.AddWithValue("@fiyat", urunFiyati);
 
             komut.ExecuteNonQuery();
             baglanti.connection().Close();
@@ -57,16 +59,27 @@ namespace SiparisOtomasyonu
         }
         public void urunGuncelle(int id)
         {
-            string sorgu = "UPDATE urun_detayi SET urun_adi=@ad, urun_miktari=@miktar, urun_adedi=@adet WHERE id=@id";
+            string sorgu = "UPDATE urun_detayi SET urun_adi=@ad, urun_miktari=@miktar, urun_adedi=@adet , urun_fiyati=@fiyat  WHERE id=@id";
             SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
 
             komut.Parameters.AddWithValue("@id", id);
             komut.Parameters.AddWithValue("@ad", urunAdi);
             komut.Parameters.AddWithValue("@miktar", urunMiktari);
             komut.Parameters.AddWithValue("@adet", urunAdeti);
+            komut.Parameters.AddWithValue("@fiyat", urunFiyati);
+
 
             komut.ExecuteNonQuery();
             baglanti.connection().Close();
+        }
+        public void urunGonder(int id, ListView listViewUrunler)
+        {
+
+            SqlCommand komut = new SqlCommand("DELETE FROM urun_detayi WHERE id=@id", baglanti.connection());
+            komut.Parameters.AddWithValue("@id", id);
+            komut.ExecuteNonQuery();
+            baglanti.connection().Close();
+            urunListele(listViewUrunler);
         }
     }
 }

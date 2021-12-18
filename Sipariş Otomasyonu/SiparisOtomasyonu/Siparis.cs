@@ -13,9 +13,14 @@ namespace SiparisOtomasyonu
         public string tarih { get; set; }
 
 
+        public Siparis_Detayi siparis_Detayi;
+        public Siparis(Siparis_Detayi siparis_Detayi)
+        {
+            this.siparis_Detayi = siparis_Detayi;
+        }
         public void toplamTutarHesapla()
         {
-
+           
         }
 
         public void vergiHesapla()

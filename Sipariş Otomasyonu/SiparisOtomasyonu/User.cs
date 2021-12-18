@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace SiparisOtomasyonu
 {
-    public abstract class User
+    public  abstract class User
     {
         public int id { get; set; }
         public string kullaniciAdi { get; set; }
         public string sifre { get; set; }
 
+      
         
     }
 }
