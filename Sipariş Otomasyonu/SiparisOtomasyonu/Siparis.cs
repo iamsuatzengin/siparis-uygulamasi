@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace SiparisOtomasyonu
 {
-    class Siparis
+    public class Siparis
     {
+        public double vergi;
         public int id { get; set; }
         public string durum { get; set; }
-        public string tarih { get; set; }
+        public DateTime tarih { get; set; }
+        public double odeme { get; set; }
+
+        public const double Vergi_orani = 0.1;
 
 
-        public SiparisDetayi siparisDetayi;
-        public Siparis(SiparisDetayi siparisDetayi)
+        public double toplamTutarHesapla()
         {
-            this.siparisDetayi = siparisDetayi;
+            odeme = odeme + vergi;
+            return odeme;
         }
-        public void toplamTutarHesapla()
-        {
-           
-        }
 
-        public void vergiHesapla()
+        public double vergiHesapla()
         {
+            vergi = odeme * Vergi_orani;
+            return vergi;
 
         }
         public void toplamAgirlikHesapla()

@@ -26,6 +26,9 @@ namespace SiparisOtomasyonu
         {
             MusteriListeForm musteriListeForm = new MusteriListeForm();
             musteriListeForm.Show();
+            this.Hide();
+
+
         }
 
         private void listViewUrunler_SelectedIndexChanged(object sender, EventArgs e)

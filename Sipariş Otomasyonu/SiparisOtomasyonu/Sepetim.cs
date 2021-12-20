@@ -28,11 +28,57 @@ namespace SiparisOtomasyonu
 
         private void btnTamamla_Click(object sender, EventArgs e)
         {
-            Siparislerim siparislerim = new Siparislerim();
-            siparislerim.Show();
-            this.Hide();
+            Kredi kredi = new Kredi();
+
+            if (tbKartNo.Text == "" || tbTarih.Text == "" || tbCvc.Text == "")
+            {
+                MessageBox.Show("Hatalı giriş !!");
+            }
+            else
+            {
+                MessageBox.Show(kredi.Yetkilimesaj());
+
+
+            }
 
         }
 
+        private void krediKart_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Cek cek = new Cek();
+
+
+            if (tbCekAdi.Text == "" || tbCekId.Text == "")
+            {
+                MessageBox.Show(" Hatalı giriş!!");
+
+            }
+            else
+            {
+                MessageBox.Show(cek.Yetkilimesaj());
+
+            }
+        }
+
+        private void btnNakitileTamamla_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAvDetayi_Click(object sender, EventArgs e)
+        {
+            Siparis siparis = new Siparis();
+            siparis.tarih = DateTime.Now;
+            siparis.toplamTutarHesapla();
+            siparis.vergiHesapla();
+            siparis.toplamAgirlikHesapla();
+
+            MessageBox.Show(siparis.tarih.ToString() + " " + siparis.toplamTutarHesapla() + " " + siparis.vergiHesapla());
+        }
     }
 }

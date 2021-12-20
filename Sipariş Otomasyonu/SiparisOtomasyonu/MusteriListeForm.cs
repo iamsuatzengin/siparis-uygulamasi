@@ -21,12 +21,10 @@ namespace SiparisOtomasyonu
 
         private void btn_Click(object sender, EventArgs e)
         {
-            if(listViewMusteri.SelectedItems.Count > 0)
-            {
-                var item = listViewMusteri.SelectedItems[0].SubItems[1].Text; 
-                
-                MessageBox.Show(item);
-            }
+            AnaMenuForm anaMenuForm = new AnaMenuForm();
+            anaMenuForm.Show();
+            this.Hide();
+
         }
     }
 }
