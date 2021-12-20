@@ -12,6 +12,7 @@ namespace SiparisOtomasyonu
 {
     public partial class Sepetim : Form
     {
+        
         public Sepetim()
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace SiparisOtomasyonu
         private void btnDevamEt_Click(object sender, EventArgs e)
         {
             AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
+            
             anaMenuMusteriForm.Show();
             this.Hide();
         }
@@ -29,9 +31,6 @@ namespace SiparisOtomasyonu
             Siparislerim siparislerim = new Siparislerim();
             siparislerim.Show();
             this.Hide();
-
-            
-
 
         }
 

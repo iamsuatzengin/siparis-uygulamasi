@@ -17,7 +17,7 @@ namespace SiparisOtomasyonu
         public string adres { get; set; }
         public string telefon { get; set; }
 
-        
+        private List<Siparis> siparislerim;
 
         SqlBaglanti sqlBaglan = new SqlBaglanti();
         public void musteriKayit()
@@ -51,6 +51,26 @@ namespace SiparisOtomasyonu
                 listView.Items.Add(item);
             }
             sqlBaglan.connection().Close();
+        }
+
+        public void sepeteEkle(Urun urun)
+        {
+            string sorgu = "INSERT INTO sepetim (kullanici_adi,kullanici_adresi,tarih,urun_adi,urun_miktari,urun_adeti, urunID)" +
+                "values (@k_ad, @k_adres, @tarih, @urun_adi, @urun_miktari, @urun_adeti, @urun_id)";
+            SqlCommand komut = new SqlCommand(sorgu, sqlBaglan.connection());
+
+            komut.Parameters.AddWithValue("@k_ad", kullaniciAdi);
+            komut.Parameters.AddWithValue("@k_adres", adres);
+            komut.Parameters.AddWithValue("@tarih", DateTime.Now.ToString());
+            komut.Parameters.AddWithValue("@urun_adi", urun.urunAdi);
+            komut.Parameters.AddWithValue("@urun_miktari", urun.urunMiktari);
+            komut.Parameters.AddWithValue("@urun_adeti", urun.urunAdeti);
+            komut.Parameters.AddWithValue("@urun_id", urun.id);
+            
+
+            komut.ExecuteNonQuery();
+            sqlBaglan.connection().Close();
+
         }
     }
 }

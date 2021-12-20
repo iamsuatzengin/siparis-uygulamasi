@@ -23,7 +23,8 @@ namespace SiparisOtomasyonu
         {
             if(listViewMusteri.SelectedItems.Count > 0)
             {
-                string item = listViewMusteri.SelectedItems[0].Text; // müşteri id alındı.
+                var item = listViewMusteri.SelectedItems[0].SubItems[1].Text; 
+                
                 MessageBox.Show(item);
             }
         }

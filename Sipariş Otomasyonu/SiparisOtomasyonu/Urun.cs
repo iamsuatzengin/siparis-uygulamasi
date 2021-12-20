@@ -14,7 +14,7 @@ namespace SiparisOtomasyonu
         public string urunAdi { get; set; }
         public int urunMiktari { get; set; }
         public int urunAdeti { get; set; }
-        public float  urunFiyati { get; set; }
+        public double urunFiyati { get; set; }
 
         SqlBaglanti baglanti = new SqlBaglanti();
         public void urunListele(ListView listViewUrunler)
@@ -80,6 +80,19 @@ namespace SiparisOtomasyonu
             komut.ExecuteNonQuery();
             baglanti.connection().Close();
             urunListele(listViewUrunler);
+        }
+
+        public void urunAdetGuncelle(int id)
+        {
+
+            string sorgu = "UPDATE urun_detayi SET urun_adedi -= @adet  WHERE id=@id";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
+            komut.Parameters.AddWithValue("@id", id);
+            komut.Parameters.AddWithValue("@adet", 1);
+
+
+            komut.ExecuteNonQuery();
+            baglanti.connection().Close();
         }
     }
 }

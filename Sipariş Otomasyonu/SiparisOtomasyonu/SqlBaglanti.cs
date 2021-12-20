@@ -11,7 +11,7 @@ namespace SiparisOtomasyonu
     {
         public SqlConnection connection()
         {
-            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-60630FD;Initial Catalog=Siparis;Integrated Security=True");
+            SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-0GQ186F;Initial Catalog=Siparis;Integrated Security=True");
             con.Open();
             return con;
         }

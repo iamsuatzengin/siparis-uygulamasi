@@ -40,6 +40,24 @@ namespace SiparisOtomasyonu
             tbAdres.Enabled = true;
             tbTelefon.Enabled = true;
         }
+        private bool girisOnaylama(SqlDataReader dataReader)
+        {
+            if (tbKullaniciAdi.Text == "" || tbSifre.Text == "")
+            {
+                MessageBox.Show("Basarisiz ");
+                return false;
+            }
+            else
+            {
+                if (dataReader.Read())
+                {
+                    MessageBox.Show("Basarili");
+                    return true;
+                }
+                MessageBox.Show("Basarisiz ");
+                return false;
+            }
+        }
         private void yoneticiGiris()
         {
             SqlCommand komut = new SqlCommand("SELECT * FROM yonetici_table WHERE kullanici_adi=@k_ad AND sifre=@sifre", sqlBaglanti.connection());
@@ -47,28 +65,16 @@ namespace SiparisOtomasyonu
             komut.Parameters.AddWithValue("@sifre", tbSifre.Text);
 
             SqlDataReader dataReader = komut.ExecuteReader();
-            girisOnaylama(dataReader);
+            
+            if (girisOnaylama(dataReader))
+            {
+                AnaMenuForm anaMenuForm = new AnaMenuForm();
+                anaMenuForm.Show();
+                this.Hide();
+            }
             sqlBaglanti.connection().Close();
         }
-        private void girisOnaylama(SqlDataReader dataReader)
-        {
-            if (tbKullaniciAdi.Text == "" || tbSifre.Text == "")
-            {
-                MessageBox.Show("Basarisiz ");
-            }
-            else
-            {
-                if (dataReader.Read())
-                {
-                    MessageBox.Show("Basarili");
-                }
-                else
-                {
-                    MessageBox.Show("Basarisiz ");
-                }
-
-            }
-        }
+        
         private void musteriGiris()
         {
             SqlCommand komut = new SqlCommand("SELECT * FROM musteri_tablo WHERE kullanici_adi=@k_ad AND sifre=@sifre", sqlBaglanti.connection());
@@ -77,8 +83,14 @@ namespace SiparisOtomasyonu
 
             SqlDataReader dataReader = komut.ExecuteReader();
 
-            girisOnaylama(dataReader);
             
+            if (girisOnaylama(dataReader))
+            {
+                AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
+                anaMenuMusteriForm.mevcutMusteriKAd = tbKullaniciAdi.Text;
+                anaMenuMusteriForm.Show();
+                this.Hide();
+            }
             sqlBaglanti.connection().Close();
 
         }
@@ -134,16 +146,11 @@ namespace SiparisOtomasyonu
             if(rbYoneticiGiris.Checked == true)
             {
                 yoneticiGiris();
-                AnaMenuForm anaMenuForm = new AnaMenuForm();
-                anaMenuForm.Show();
-                this.Hide();
+                
             }
             else
             {
                 musteriGiris();
-                AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
-                anaMenuMusteriForm.Show();
-                this.Hide();
             }
         }
 
@@ -151,12 +158,44 @@ namespace SiparisOtomasyonu
         {
             if(rbYonetici.Checked == true)
             {
-                yoneticiKayit();
+                if (kullaniciKontrol("yonetici_table")) { 
+                    yoneticiKayit();
+                }
             }
-            else
+            else 
             {
-                musteriKayit();
+                if (kullaniciKontrol("musteri_tablo"))
+                {
+                    musteriKayit();
+                }
             }
+        }
+        private bool kullaniciKontrol(String tablo)
+        {
+            string sorgu = "SELECT kullanici_adi FROM " + tablo;
+            SqlCommand komut = new SqlCommand(sorgu, sqlBaglanti.connection());
+
+            SqlDataReader dataReader = komut.ExecuteReader();
+
+            List<String> musterilerKAd = new List<string>();
+            string tbKullaniciAdi = tbKullaniciAdiKayit.Text;
+
+            while (dataReader.Read()) {
+                musterilerKAd.Add(dataReader["kullanici_adi"].ToString());
+            }
+
+            foreach (var kullaniciAd in musterilerKAd)
+            {
+                if (kullaniciAd == tbKullaniciAdi)
+                {
+                    MessageBox.Show("Girdiğiniz kullanıcı adı daha önce alınmış! Farklı bir kullanıcı adı deneyiniz.");
+                    return false;
+                }
+            }
+
+            dataReader.Close();
+            sqlBaglanti.connection().Close();
+            return true;
         }
     }
 }

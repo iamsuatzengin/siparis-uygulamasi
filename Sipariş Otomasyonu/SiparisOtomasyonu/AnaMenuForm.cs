@@ -30,7 +30,7 @@ namespace SiparisOtomasyonu
 
         private void listViewUrunler_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnUrunCikar_Click(object sender, EventArgs e)
@@ -40,7 +40,10 @@ namespace SiparisOtomasyonu
                 string item = listViewUrunler.SelectedItems[0].Text; // ürün id
                 listViewUrunler.Items.Clear();
                 urunler.urunCikar(Convert.ToInt32(item), listViewUrunler);
-                
+            }
+            else
+            {
+                MessageBox.Show("Lütfen bir ürün seçiniz!");
             }
         }
 
@@ -61,9 +64,14 @@ namespace SiparisOtomasyonu
             {
                 string item = listViewUrunler.SelectedItems[0].Text; // ürün id
                 urunEklemeForm.id = Convert.ToInt32(item);
+                urunEklemeForm.nereden = true;
+                urunEklemeForm.Show();
             }
-            urunEklemeForm.nereden = true; 
-            urunEklemeForm.Show();
+            else
+            {
+                MessageBox.Show("Lütfen bir ürün seçiniz!");
+            }
+            
         }
     }
 }

@@ -36,7 +36,9 @@ namespace SiparisOtomasyonu
                 urun.urunAdi = tbUrunAdi.Text;
                 urun.urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 urun.urunAdeti = Convert.ToInt32(tbUrunAdet.Text);
-                urun.urunFiyati = Convert.ToInt32(tbUrunFiyat.Text);
+                urun.urunFiyati = float.Parse(tbUrunFiyat.Text);
+                urun.urunFiyati = Math.Round(urun.urunFiyati, 2);
+
                 urun.urunGuncelle(this.id);
                 listView.Items.Clear();
                 urun.urunListele(listView);
@@ -46,7 +48,8 @@ namespace SiparisOtomasyonu
                 string urunAdi = tbUrunAdi.Text;
                 int urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 int urunAdedi = Convert.ToInt32(tbUrunAdet.Text);
-                float urunFiyat = Convert.ToInt32(tbUrunFiyat.Text);
+                double urunFiyat = float.Parse(tbUrunFiyat.Text);
+                urunFiyat = Math.Round(urunFiyat, 2); ;
 
                 urun.urunAdi = urunAdi;
                 urun.urunMiktari = urunMiktari;

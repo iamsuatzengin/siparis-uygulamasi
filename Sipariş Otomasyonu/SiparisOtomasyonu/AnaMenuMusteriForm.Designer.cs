@@ -31,14 +31,14 @@ namespace SiparisOtomasyonu
         {
             this.lblAnaMenu = new System.Windows.Forms.Label();
             this.listViewUrunler = new System.Windows.Forms.ListView();
+            this.stnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunFiyati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnSiparislerim = new System.Windows.Forms.Button();
             this.btnSepeteEkle = new System.Windows.Forms.Button();
             this.btnSepetim = new System.Windows.Forms.Button();
-            this.stnUrunFiyati = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.stnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lblAnaMenu
@@ -70,6 +70,10 @@ namespace SiparisOtomasyonu
             this.listViewUrunler.View = System.Windows.Forms.View.Details;
             this.listViewUrunler.SelectedIndexChanged += new System.EventHandler(this.listViewUrunler_SelectedIndexChanged);
             // 
+            // stnID
+            // 
+            this.stnID.Text = "Sıra";
+            // 
             // stnUrunAdi
             // 
             this.stnUrunAdi.Text = "Ürün Adı";
@@ -84,6 +88,11 @@ namespace SiparisOtomasyonu
             // 
             this.stnUrunAdedi.Text = "Ürün Adedi";
             this.stnUrunAdedi.Width = 200;
+            // 
+            // stnUrunFiyati
+            // 
+            this.stnUrunFiyati.Text = "Ürün Fiyatı";
+            this.stnUrunFiyati.Width = 100;
             // 
             // btnSiparislerim
             // 
@@ -115,15 +124,6 @@ namespace SiparisOtomasyonu
             this.btnSepetim.UseVisualStyleBackColor = true;
             this.btnSepetim.Click += new System.EventHandler(this.btnSepetim_Click);
             // 
-            // stnUrunFiyati
-            // 
-            this.stnUrunFiyati.Text = "Ürün Fiyatı";
-            this.stnUrunFiyati.Width = 100;
-            // 
-            // stnID
-            // 
-            this.stnID.Text = "Sıra";
-            // 
             // AnaMenuMusteriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -136,6 +136,7 @@ namespace SiparisOtomasyonu
             this.Controls.Add(this.lblAnaMenu);
             this.Name = "AnaMenuMusteriForm";
             this.Text = "AnaMenuMusteriForm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaMenuMusteriForm_FormClosing);
             this.Load += new System.EventHandler(this.AnaMenuMusteriForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
