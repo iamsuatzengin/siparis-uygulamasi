@@ -38,6 +38,7 @@ namespace SiparisOtomasyonu
             this.stnTelefon = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnKullaniciAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btn = new System.Windows.Forms.Button();
+            this.lblMusBilSistem = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listViewMusteri
@@ -52,8 +53,8 @@ namespace SiparisOtomasyonu
             this.listViewMusteri.FullRowSelect = true;
             this.listViewMusteri.GridLines = true;
             this.listViewMusteri.HideSelection = false;
-            this.listViewMusteri.Location = new System.Drawing.Point(515, 42);
-            this.listViewMusteri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listViewMusteri.Location = new System.Drawing.Point(184, 133);
+            this.listViewMusteri.Margin = new System.Windows.Forms.Padding(4);
             this.listViewMusteri.Name = "listViewMusteri";
             this.listViewMusteri.Size = new System.Drawing.Size(884, 511);
             this.listViewMusteri.TabIndex = 0;
@@ -92,26 +93,38 @@ namespace SiparisOtomasyonu
             // 
             // btn
             // 
-            this.btn.Location = new System.Drawing.Point(159, 74);
-            this.btn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn.Location = new System.Drawing.Point(1136, 590);
+            this.btn.Margin = new System.Windows.Forms.Padding(4);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(129, 54);
             this.btn.TabIndex = 1;
-            this.btn.Text = "Musteri";
+            this.btn.Text = "Geri";
             this.btn.UseVisualStyleBackColor = true;
             this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // lblMusBilSistem
+            // 
+            this.lblMusBilSistem.AutoSize = true;
+            this.lblMusBilSistem.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMusBilSistem.Location = new System.Drawing.Point(437, 32);
+            this.lblMusBilSistem.Name = "lblMusBilSistem";
+            this.lblMusBilSistem.Size = new System.Drawing.Size(309, 39);
+            this.lblMusBilSistem.TabIndex = 2;
+            this.lblMusBilSistem.Text = "Müşteri Bilgi Listesi";
             // 
             // MusteriListeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1441, 750);
+            this.Controls.Add(this.lblMusBilSistem);
             this.Controls.Add(this.btn);
             this.Controls.Add(this.listViewMusteri);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MusteriListeForm";
             this.Text = "MusteriListeForm";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -125,5 +138,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.ColumnHeader stnTelefon;
         private System.Windows.Forms.ColumnHeader stnKullaniciAdi;
         private System.Windows.Forms.Button btn;
+        private System.Windows.Forms.Label lblMusBilSistem;
     }
 }

@@ -8,7 +8,7 @@ namespace SiparisOtomasyonu
 {
     public abstract class Odeme
     {
-        public string Odemetutari { get; set; }
+        public Siparis odeme_tutari { get; set; }
     }
     interface Yetkili
     {
@@ -23,7 +23,7 @@ namespace SiparisOtomasyonu
 
        public  string Yetkilimesaj()
         {
-            return "mesaj";
+            return "Kredi kartıyla ödemeniz alınmıştır.";
         }
     }
     public class Nakit : Odeme
@@ -37,7 +37,7 @@ namespace SiparisOtomasyonu
 
       public   string Yetkilimesaj()
         {
-            return "mesaj";
+            return "Çek ile ödemeniz alınmıştır.";
         }
     }
 

@@ -9,7 +9,15 @@ namespace SiparisOtomasyonu
    public  class Item
     {
         public const int Kargo_Agirligi = 10;
-        public int MyProperty { get; set; }
+        public string  urunAd { get; set; }
+        public  void Toplam_agirlik_alma()
+        {
+
+        }
+        public void Toplam_fiyat_alma()
+        {
+
+        }
 
 
     }

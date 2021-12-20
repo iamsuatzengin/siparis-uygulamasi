@@ -105,7 +105,6 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Yonetici.cs" />
-    <Compile Include="Ödeme.cs" />
     <EmbeddedResource Include="AnaMenuForm.resx">
       <DependentUpon>AnaMenuForm.cs</DependentUpon>
     </EmbeddedResource>

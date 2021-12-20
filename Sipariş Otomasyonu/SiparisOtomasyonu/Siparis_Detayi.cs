@@ -8,12 +8,15 @@ namespace SiparisOtomasyonu
 {
    public  class Siparis_Detayi
     {
-        public string Adet { get; set; }
+        public double  Adet { get; set; }
         public string Vergi_Durumu{ get; set; }
+        public double odeme_miktari { get; set; }
 
-        public  void Toplam_Hesap()
+        public double Toplam_Hesap()
         {
-
+         odeme_miktari = odeme_miktari * Adet;
+           
+            return odeme_miktari;
         }
         public void Toplam_Agirlik()
         {
