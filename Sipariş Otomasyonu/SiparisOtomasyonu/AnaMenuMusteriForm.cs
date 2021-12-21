@@ -14,7 +14,7 @@ namespace SiparisOtomasyonu
     public partial class AnaMenuMusteriForm : Form
     {
         SqlBaglanti baglanti = new SqlBaglanti();
-        public string mevcutMusteriKAd;
+        
         Urun urun = new Urun();
         Musteri musteri = new Musteri();
         public AnaMenuMusteriForm()
@@ -25,14 +25,13 @@ namespace SiparisOtomasyonu
         private void AnaMenuMusteriForm_Load(object sender, EventArgs e)
         {
             urun.urunListele(listViewUrunler);
+            mevcutKullaniciAd();
             
-            //MessageBox.Show(this.mevcutMusteriKAd);
         }
         
         private void btnSepeteEkle_Click(object sender, EventArgs e)
         {
-            Sepetim sepetim = new Sepetim();
-            sepetim.Show();
+            
             
 
             if (listViewUrunler.SelectedItems.Count > 0)
@@ -40,8 +39,7 @@ namespace SiparisOtomasyonu
                 sepeteEkle();
 
             }
-
-            this.Hide();
+            
         }
 
         private void btnSiparislerim_Click(object sender, EventArgs e)
@@ -77,23 +75,37 @@ namespace SiparisOtomasyonu
             urun.urunAdetGuncelle(urun.id);
             baglanti.connection().Close();
         }
-        
+
         private void mevcutKullaniciVeriler()
         {
-            
-            string sorgu = "SELECT * FROM musteri_tablo WHERE kullanici_adi=@k_ad";
+            string sorgu = "SELECT * FROM musteri_tablo WHERE kullanici_adi = @k_ad";
             SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
-            komut.Parameters.AddWithValue("@k_ad", mevcutMusteriKAd);
+
+            komut.Parameters.AddWithValue("@k_ad", musteri.kullaniciAdi);
+
             SqlDataReader reader = komut.ExecuteReader();
             while (reader.Read())
             {
-                musteri.id = Convert.ToInt32(reader["id"]);
-                musteri.kullaniciAdi = reader["kullanici_adi"].ToString();
                 musteri.adres = reader["adres"].ToString();
             }
-            Sepetim sepet = new Sepetim();
+            baglanti.connection().Close();
+
+        }
+
+        private void mevcutKullaniciAd()
+        {
             
-            //reader.Close();
+            string sorgu = "SELECT * FROM giris_kayitlari_tablo ";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
+            
+            SqlDataReader reader = komut.ExecuteReader();
+            while (reader.Read())
+            {
+                musteri.kullaniciAdi = reader["kullanici_adi"].ToString();
+            }
+            
+            
+            reader.Close();
             baglanti.connection().Close();
         }
 
@@ -105,7 +117,18 @@ namespace SiparisOtomasyonu
                 e.Cancel = true;
                 return;
             }
+            verileriSil();
             Application.Exit();
+        }
+        private void verileriSil()
+        {
+            string sorgu = "DELETE FROM giris_kayitlari_tablo ";
+            SqlCommand komut = new SqlCommand(sorgu, baglanti.connection());
+            //WHERE kullanici_adi=@k_ad
+            //komut.Parameters.AddWithValue("@k_ad", musteri.kullaniciAdi);
+
+            komut.ExecuteNonQuery();
+            baglanti.connection().Close();
         }
     }
 

@@ -30,7 +30,7 @@ namespace SiparisOtomasyonu
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.listViewSepet = new System.Windows.Forms.ListView();
             this.tcOdeme = new System.Windows.Forms.TabControl();
             this.krediKart = new System.Windows.Forms.TabPage();
             this.lblCvc = new System.Windows.Forms.Label();
@@ -52,6 +52,10 @@ namespace SiparisOtomasyonu
             this.tbTutar = new System.Windows.Forms.TextBox();
             this.btnDevamEt = new System.Windows.Forms.Button();
             this.btnAvDetayi = new System.Windows.Forms.Button();
+            this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnToplamFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcOdeme.SuspendLayout();
             this.krediKart.SuspendLayout();
             this.cek.SuspendLayout();
@@ -68,14 +72,21 @@ namespace SiparisOtomasyonu
             this.label1.TabIndex = 0;
             this.label1.Text = "Sepetim";
             // 
-            // listView1
+            // listViewSepet
             // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(23, 153);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(586, 450);
-            this.listView1.TabIndex = 1;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listViewSepet.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stnUrunAdi,
+            this.stnUrunMiktari,
+            this.stnUrunAdedi,
+            this.stnToplamFiyat});
+            this.listViewSepet.HideSelection = false;
+            this.listViewSepet.Location = new System.Drawing.Point(12, 153);
+            this.listViewSepet.Name = "listViewSepet";
+            this.listViewSepet.Size = new System.Drawing.Size(586, 450);
+            this.listViewSepet.TabIndex = 1;
+            this.listViewSepet.UseCompatibleStateImageBehavior = false;
+            this.listViewSepet.View = System.Windows.Forms.View.Details;
+            this.listViewSepet.SelectedIndexChanged += new System.EventHandler(this.listViewSepet_SelectedIndexChanged);
             // 
             // tcOdeme
             // 
@@ -288,6 +299,26 @@ namespace SiparisOtomasyonu
             this.btnAvDetayi.UseVisualStyleBackColor = true;
             this.btnAvDetayi.Click += new System.EventHandler(this.btnAvDetayi_Click);
             // 
+            // stnUrunAdi
+            // 
+            this.stnUrunAdi.Text = "Ürün Adı";
+            this.stnUrunAdi.Width = 220;
+            // 
+            // stnUrunMiktari
+            // 
+            this.stnUrunMiktari.Text = "Ürün Miktarı";
+            this.stnUrunMiktari.Width = 120;
+            // 
+            // stnUrunAdedi
+            // 
+            this.stnUrunAdedi.Text = "Ürün Adeti";
+            this.stnUrunAdedi.Width = 120;
+            // 
+            // stnToplamFiyat
+            // 
+            this.stnToplamFiyat.Text = "Toplam Fiyat";
+            this.stnToplamFiyat.Width = 120;
+            // 
             // Sepetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -296,10 +327,11 @@ namespace SiparisOtomasyonu
             this.Controls.Add(this.btnAvDetayi);
             this.Controls.Add(this.btnDevamEt);
             this.Controls.Add(this.tcOdeme);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.listViewSepet);
             this.Controls.Add(this.label1);
             this.Name = "Sepetim";
             this.Text = "Sepetim";
+            this.Load += new System.EventHandler(this.Sepetim_Load);
             this.tcOdeme.ResumeLayout(false);
             this.krediKart.ResumeLayout(false);
             this.krediKart.PerformLayout();
@@ -315,7 +347,7 @@ namespace SiparisOtomasyonu
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView listViewSepet;
         private System.Windows.Forms.TabControl tcOdeme;
         private System.Windows.Forms.TabPage krediKart;
         private System.Windows.Forms.Label lblCvc;
@@ -337,5 +369,9 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.Button btnNakitileTamamla;
         private System.Windows.Forms.Button btnCekileTamamla;
         private System.Windows.Forms.Button btnAvDetayi;
+        private System.Windows.Forms.ColumnHeader stnUrunAdi;
+        private System.Windows.Forms.ColumnHeader stnUrunMiktari;
+        private System.Windows.Forms.ColumnHeader stnUrunAdedi;
+        private System.Windows.Forms.ColumnHeader stnToplamFiyat;
     }
 }

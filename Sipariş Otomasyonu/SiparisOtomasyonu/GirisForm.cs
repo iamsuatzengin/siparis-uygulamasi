@@ -87,7 +87,7 @@ namespace SiparisOtomasyonu
             if (girisOnaylama(dataReader))
             {
                 AnaMenuMusteriForm anaMenuMusteriForm = new AnaMenuMusteriForm();
-                anaMenuMusteriForm.mevcutMusteriKAd = tbKullaniciAdi.Text;
+                
                 anaMenuMusteriForm.Show();
                 this.Hide();
             }
@@ -151,6 +151,7 @@ namespace SiparisOtomasyonu
             else
             {
                 musteriGiris();
+                girisKayitlari();
             }
         }
 
@@ -196,6 +197,17 @@ namespace SiparisOtomasyonu
             dataReader.Close();
             sqlBaglanti.connection().Close();
             return true;
+        }
+
+        private void girisKayitlari()
+        {
+            string sorgu = "INSERT INTO giris_kayitlari_tablo (kullanici_adi) values (@k_ad)";
+            SqlCommand komut = new SqlCommand(sorgu, sqlBaglanti.connection());
+
+            komut.Parameters.AddWithValue("@k_ad", tbKullaniciAdi.Text);
+
+            komut.ExecuteNonQuery();
+            sqlBaglanti.connection().Close();
         }
     }
 }
