@@ -15,7 +15,7 @@ namespace SiparisOtomasyonu
     {
         SqlBaglanti baglanti = new SqlBaglanti();
         
-        Urun urun = new Urun();
+        SiparisDetayi urun = new SiparisDetayi();
         Musteri musteri = new Musteri();
         public AnaMenuMusteriForm()
         {
@@ -45,6 +45,7 @@ namespace SiparisOtomasyonu
         private void btnSiparislerim_Click(object sender, EventArgs e)
         {
             Siparislerim siparislerim = new Siparislerim();
+            siparislerim.butonGizleme = false;
             siparislerim.Show();
             this.Hide();
         }
@@ -68,10 +69,11 @@ namespace SiparisOtomasyonu
             urun.urunAdi = listViewUrunler.SelectedItems[0].SubItems[1].Text;
             urun.urunMiktari = Convert.ToInt32(listViewUrunler.SelectedItems[0].SubItems[2].Text);
             urun.urunAdeti = 1;
-            urun.urunFiyati = Convert.ToDouble(listViewUrunler.SelectedItems[0].SubItems[4].Text);
+            urun.urunFiyati = Convert.ToDecimal(listViewUrunler.SelectedItems[0].SubItems[4].Text);
             mevcutKullaniciVeriler();
-            
+
             musteri.sepeteEkle(urun);
+            
             urun.urunAdetGuncelle(urun.id);
             baglanti.connection().Close();
         }

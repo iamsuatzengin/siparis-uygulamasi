@@ -12,7 +12,7 @@ namespace SiparisOtomasyonu
 {
     public partial class AnaMenuForm : Form
     {
-        Urun urunler = new Urun();
+        SiparisDetayi urunler = new SiparisDetayi();
         
         public AnaMenuForm()
         {

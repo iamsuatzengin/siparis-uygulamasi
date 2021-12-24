@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Sipariş Otomasyonu",
+    "\\Sipariş Otomasyonu\\SiparisOtomasyonu"
   ],
-  "SelectedNode": "\\SiparisOtomasyonu.sln",
+  "SelectedNode": "\\Sipariş Otomasyonu",
   "PreviewInSolutionExplorer": false
 }

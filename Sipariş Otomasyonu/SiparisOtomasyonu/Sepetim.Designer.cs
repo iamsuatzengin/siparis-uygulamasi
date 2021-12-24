@@ -31,14 +31,18 @@ namespace SiparisOtomasyonu
         {
             this.label1 = new System.Windows.Forms.Label();
             this.listViewSepet = new System.Windows.Forms.ListView();
+            this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnToplamFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcOdeme = new System.Windows.Forms.TabControl();
             this.krediKart = new System.Windows.Forms.TabPage();
+            this.tarih = new System.Windows.Forms.TextBox();
             this.lblCvc = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.lblKartNo = new System.Windows.Forms.Label();
-            this.btnKKartileTamamla = new System.Windows.Forms.Button();
+            this.btnTamamla = new System.Windows.Forms.Button();
             this.tbCvc = new System.Windows.Forms.TextBox();
-            this.tbTarih = new System.Windows.Forms.TextBox();
             this.tbKartNo = new System.Windows.Forms.TextBox();
             this.cek = new System.Windows.Forms.TabPage();
             this.btnCekileTamamla = new System.Windows.Forms.Button();
@@ -47,15 +51,10 @@ namespace SiparisOtomasyonu
             this.lblCekAdi = new System.Windows.Forms.Label();
             this.tbCekAdi = new System.Windows.Forms.TextBox();
             this.nakit = new System.Windows.Forms.TabPage();
-            this.btnNakitileTamamla = new System.Windows.Forms.Button();
             this.lblTutar = new System.Windows.Forms.Label();
             this.tbTutar = new System.Windows.Forms.TextBox();
+            this.btnNakitileTamamla = new System.Windows.Forms.Button();
             this.btnDevamEt = new System.Windows.Forms.Button();
-            this.btnAvDetayi = new System.Windows.Forms.Button();
-            this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.stnUrunAdedi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.stnToplamFiyat = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tcOdeme.SuspendLayout();
             this.krediKart.SuspendLayout();
             this.cek.SuspendLayout();
@@ -80,7 +79,7 @@ namespace SiparisOtomasyonu
             this.stnUrunAdedi,
             this.stnToplamFiyat});
             this.listViewSepet.HideSelection = false;
-            this.listViewSepet.Location = new System.Drawing.Point(12, 153);
+            this.listViewSepet.Location = new System.Drawing.Point(23, 153);
             this.listViewSepet.Name = "listViewSepet";
             this.listViewSepet.Size = new System.Drawing.Size(586, 450);
             this.listViewSepet.TabIndex = 1;
@@ -88,12 +87,32 @@ namespace SiparisOtomasyonu
             this.listViewSepet.View = System.Windows.Forms.View.Details;
             this.listViewSepet.SelectedIndexChanged += new System.EventHandler(this.listViewSepet_SelectedIndexChanged);
             // 
+            // stnUrunAdi
+            // 
+            this.stnUrunAdi.Text = "Ürün Adı";
+            this.stnUrunAdi.Width = 220;
+            // 
+            // stnUrunMiktari
+            // 
+            this.stnUrunMiktari.Text = "Ürün Miktarı";
+            this.stnUrunMiktari.Width = 120;
+            // 
+            // stnUrunAdedi
+            // 
+            this.stnUrunAdedi.Text = "Ürün Adeti";
+            this.stnUrunAdedi.Width = 120;
+            // 
+            // stnToplamFiyat
+            // 
+            this.stnToplamFiyat.Text = "Ürün Fiyati";
+            this.stnToplamFiyat.Width = 120;
+            // 
             // tcOdeme
             // 
             this.tcOdeme.Controls.Add(this.krediKart);
             this.tcOdeme.Controls.Add(this.cek);
             this.tcOdeme.Controls.Add(this.nakit);
-            this.tcOdeme.Location = new System.Drawing.Point(631, 153);
+            this.tcOdeme.Location = new System.Drawing.Point(638, 153);
             this.tcOdeme.Name = "tcOdeme";
             this.tcOdeme.SelectedIndex = 0;
             this.tcOdeme.Size = new System.Drawing.Size(538, 322);
@@ -101,12 +120,12 @@ namespace SiparisOtomasyonu
             // 
             // krediKart
             // 
+            this.krediKart.Controls.Add(this.tarih);
             this.krediKart.Controls.Add(this.lblCvc);
             this.krediKart.Controls.Add(this.label2);
             this.krediKart.Controls.Add(this.lblKartNo);
-            this.krediKart.Controls.Add(this.btnKKartileTamamla);
+            this.krediKart.Controls.Add(this.btnTamamla);
             this.krediKart.Controls.Add(this.tbCvc);
-            this.krediKart.Controls.Add(this.tbTarih);
             this.krediKart.Controls.Add(this.tbKartNo);
             this.krediKart.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.krediKart.Location = new System.Drawing.Point(4, 25);
@@ -118,6 +137,13 @@ namespace SiparisOtomasyonu
             this.krediKart.Text = "Kredi Kartı";
             this.krediKart.UseVisualStyleBackColor = true;
             this.krediKart.Click += new System.EventHandler(this.krediKart_Click);
+            // 
+            // tarih
+            // 
+            this.tarih.Location = new System.Drawing.Point(221, 116);
+            this.tarih.Name = "tarih";
+            this.tarih.Size = new System.Drawing.Size(276, 23);
+            this.tarih.TabIndex = 6;
             // 
             // lblCvc
             // 
@@ -149,15 +175,15 @@ namespace SiparisOtomasyonu
             this.lblKartNo.TabIndex = 3;
             this.lblKartNo.Text = "Kart No:";
             // 
-            // btnKKartileTamamla
+            // btnTamamla
             // 
-            this.btnKKartileTamamla.Location = new System.Drawing.Point(347, 229);
-            this.btnKKartileTamamla.Name = "btnKKartileTamamla";
-            this.btnKKartileTamamla.Size = new System.Drawing.Size(150, 44);
-            this.btnKKartileTamamla.TabIndex = 3;
-            this.btnKKartileTamamla.Text = "Alışverişi Tamamla";
-            this.btnKKartileTamamla.UseVisualStyleBackColor = true;
-            this.btnKKartileTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
+            this.btnTamamla.Location = new System.Drawing.Point(347, 226);
+            this.btnTamamla.Name = "btnTamamla";
+            this.btnTamamla.Size = new System.Drawing.Size(150, 44);
+            this.btnTamamla.TabIndex = 3;
+            this.btnTamamla.Text = "Alışverişi Tamamla";
+            this.btnTamamla.UseVisualStyleBackColor = true;
+            this.btnTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
             // 
             // tbCvc
             // 
@@ -166,19 +192,13 @@ namespace SiparisOtomasyonu
             this.tbCvc.Size = new System.Drawing.Size(276, 23);
             this.tbCvc.TabIndex = 2;
             // 
-            // tbTarih
-            // 
-            this.tbTarih.Location = new System.Drawing.Point(221, 116);
-            this.tbTarih.Name = "tbTarih";
-            this.tbTarih.Size = new System.Drawing.Size(276, 23);
-            this.tbTarih.TabIndex = 1;
-            // 
             // tbKartNo
             // 
             this.tbKartNo.Location = new System.Drawing.Point(221, 66);
             this.tbKartNo.Name = "tbKartNo";
             this.tbKartNo.Size = new System.Drawing.Size(276, 23);
             this.tbKartNo.TabIndex = 0;
+            this.tbKartNo.TextChanged += new System.EventHandler(this.tbKartNo_TextChanged);
             // 
             // cek
             // 
@@ -252,16 +272,6 @@ namespace SiparisOtomasyonu
             this.nakit.Text = "Nakit";
             this.nakit.UseVisualStyleBackColor = true;
             // 
-            // btnNakitileTamamla
-            // 
-            this.btnNakitileTamamla.Location = new System.Drawing.Point(286, 227);
-            this.btnNakitileTamamla.Name = "btnNakitileTamamla";
-            this.btnNakitileTamamla.Size = new System.Drawing.Size(150, 44);
-            this.btnNakitileTamamla.TabIndex = 5;
-            this.btnNakitileTamamla.Text = "Alışverişi Tamamla";
-            this.btnNakitileTamamla.UseVisualStyleBackColor = true;
-            this.btnNakitileTamamla.Click += new System.EventHandler(this.btnNakitileTamamla_Click);
-            // 
             // lblTutar
             // 
             this.lblTutar.AutoSize = true;
@@ -279,6 +289,16 @@ namespace SiparisOtomasyonu
             this.tbTutar.Size = new System.Drawing.Size(268, 22);
             this.tbTutar.TabIndex = 0;
             // 
+            // btnNakitileTamamla
+            // 
+            this.btnNakitileTamamla.Location = new System.Drawing.Point(319, 210);
+            this.btnNakitileTamamla.Name = "btnNakitileTamamla";
+            this.btnNakitileTamamla.Size = new System.Drawing.Size(150, 44);
+            this.btnNakitileTamamla.TabIndex = 5;
+            this.btnNakitileTamamla.Text = "Alışverişi Tamamla";
+            this.btnNakitileTamamla.UseVisualStyleBackColor = true;
+            this.btnNakitileTamamla.Click += new System.EventHandler(this.btnNakitileTamamla_Click);
+            // 
             // btnDevamEt
             // 
             this.btnDevamEt.Location = new System.Drawing.Point(434, 632);
@@ -289,42 +309,11 @@ namespace SiparisOtomasyonu
             this.btnDevamEt.UseVisualStyleBackColor = true;
             this.btnDevamEt.Click += new System.EventHandler(this.btnDevamEt_Click);
             // 
-            // btnAvDetayi
-            // 
-            this.btnAvDetayi.Location = new System.Drawing.Point(979, 620);
-            this.btnAvDetayi.Name = "btnAvDetayi";
-            this.btnAvDetayi.Size = new System.Drawing.Size(190, 42);
-            this.btnAvDetayi.TabIndex = 5;
-            this.btnAvDetayi.Text = "Alışveriş Detayı";
-            this.btnAvDetayi.UseVisualStyleBackColor = true;
-            this.btnAvDetayi.Click += new System.EventHandler(this.btnAvDetayi_Click);
-            // 
-            // stnUrunAdi
-            // 
-            this.stnUrunAdi.Text = "Ürün Adı";
-            this.stnUrunAdi.Width = 220;
-            // 
-            // stnUrunMiktari
-            // 
-            this.stnUrunMiktari.Text = "Ürün Miktarı";
-            this.stnUrunMiktari.Width = 120;
-            // 
-            // stnUrunAdedi
-            // 
-            this.stnUrunAdedi.Text = "Ürün Adeti";
-            this.stnUrunAdedi.Width = 120;
-            // 
-            // stnToplamFiyat
-            // 
-            this.stnToplamFiyat.Text = "Toplam Fiyat";
-            this.stnToplamFiyat.Width = 120;
-            // 
             // Sepetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1206, 749);
-            this.Controls.Add(this.btnAvDetayi);
             this.Controls.Add(this.btnDevamEt);
             this.Controls.Add(this.tcOdeme);
             this.Controls.Add(this.listViewSepet);
@@ -354,7 +343,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblKartNo;
         private System.Windows.Forms.TextBox tbCvc;
-        private System.Windows.Forms.TextBox tbTarih;
         private System.Windows.Forms.TextBox tbKartNo;
         private System.Windows.Forms.TabPage cek;
         private System.Windows.Forms.TextBox tbCekId;
@@ -364,14 +352,14 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.TabPage nakit;
         private System.Windows.Forms.Label lblTutar;
         private System.Windows.Forms.TextBox tbTutar;
-        private System.Windows.Forms.Button btnKKartileTamamla;
+        private System.Windows.Forms.Button btnTamamla;
         private System.Windows.Forms.Button btnDevamEt;
         private System.Windows.Forms.Button btnNakitileTamamla;
         private System.Windows.Forms.Button btnCekileTamamla;
-        private System.Windows.Forms.Button btnAvDetayi;
         private System.Windows.Forms.ColumnHeader stnUrunAdi;
         private System.Windows.Forms.ColumnHeader stnUrunMiktari;
         private System.Windows.Forms.ColumnHeader stnUrunAdedi;
         private System.Windows.Forms.ColumnHeader stnToplamFiyat;
+        private System.Windows.Forms.TextBox tarih;
     }
 }

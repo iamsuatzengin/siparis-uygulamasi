@@ -87,16 +87,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SiparisDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SiparisDetayi.cs" />
     <Compile Include="Siparislerim.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Siparislerim.Designer.cs">
       <DependentUpon>Siparislerim.cs</DependentUpon>
     </Compile>
-    <Compile Include="Siparis_Detayi.cs" />
     <Compile Include="SqlBaglanti.cs" />
-    <Compile Include="Urun.cs" />
+    <Compile Include="SiparisDetayi.cs" />
     <Compile Include="UrunEklemeForm.cs">
       <SubType>Form</SubType>
     </Compile>

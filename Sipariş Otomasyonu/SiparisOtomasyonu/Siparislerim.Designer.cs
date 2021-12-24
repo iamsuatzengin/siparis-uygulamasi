@@ -30,12 +30,13 @@ namespace SiparisOtomasyonu
         private void InitializeComponent()
         {
             this.lblsiparişlerim = new System.Windows.Forms.Label();
-            this.lisstsiparislerim = new System.Windows.Forms.ListView();
+            this.listViewSiparisler = new System.Windows.Forms.ListView();
+            this.stnSiparisID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stntarih = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.stnDurum = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnanageridon = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button1_ = new System.Windows.Forms.Button();
+            this.btnbilgi = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblsiparişlerim
@@ -48,24 +49,38 @@ namespace SiparisOtomasyonu
             this.lblsiparişlerim.TabIndex = 0;
             this.lblsiparişlerim.Text = "Siparişlerim";
             // 
-            // lisstsiparislerim
+            // listViewSiparisler
             // 
-            this.lisstsiparislerim.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4});
-            this.lisstsiparislerim.HideSelection = false;
-            this.lisstsiparislerim.Location = new System.Drawing.Point(354, 137);
-            this.lisstsiparislerim.Name = "lisstsiparislerim";
-            this.lisstsiparislerim.Size = new System.Drawing.Size(419, 235);
-            this.lisstsiparislerim.TabIndex = 1;
-            this.lisstsiparislerim.UseCompatibleStateImageBehavior = false;
-            this.lisstsiparislerim.View = System.Windows.Forms.View.Details;
+            this.listViewSiparisler.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.stnSiparisID,
+            this.stntarih,
+            this.stnDurum});
+            this.listViewSiparisler.HideSelection = false;
+            this.listViewSiparisler.Location = new System.Drawing.Point(42, 131);
+            this.listViewSiparisler.Name = "listViewSiparisler";
+            this.listViewSiparisler.Size = new System.Drawing.Size(668, 440);
+            this.listViewSiparisler.TabIndex = 1;
+            this.listViewSiparisler.UseCompatibleStateImageBehavior = false;
+            this.listViewSiparisler.View = System.Windows.Forms.View.Details;
+            // 
+            // stnSiparisID
+            // 
+            this.stnSiparisID.Text = "#Sipariş ID";
+            this.stnSiparisID.Width = 120;
+            // 
+            // stntarih
+            // 
+            this.stntarih.Text = "Tarih";
+            this.stntarih.Width = 250;
+            // 
+            // stnDurum
+            // 
+            this.stnDurum.Text = "Sipariş Durumu";
+            this.stnDurum.Width = 250;
             // 
             // btnanageridon
             // 
-            this.btnanageridon.Location = new System.Drawing.Point(437, 479);
+            this.btnanageridon.Location = new System.Drawing.Point(450, 604);
             this.btnanageridon.Name = "btnanageridon";
             this.btnanageridon.Size = new System.Drawing.Size(230, 77);
             this.btnanageridon.TabIndex = 2;
@@ -73,16 +88,39 @@ namespace SiparisOtomasyonu
             this.btnanageridon.UseVisualStyleBackColor = true;
             this.btnanageridon.Click += new System.EventHandler(this.btnanageridon_Click);
             // 
+            // button1_
+            // 
+            this.button1_.Location = new System.Drawing.Point(804, 168);
+            this.button1_.Name = "button1_";
+            this.button1_.Size = new System.Drawing.Size(278, 99);
+            this.button1_.TabIndex = 3;
+            this.button1_.Text = "Sipariş Detayı";
+            this.button1_.UseVisualStyleBackColor = true;
+            this.button1_.Click += new System.EventHandler(this.btnDetay_Click);
+            // 
+            // btnbilgi
+            // 
+            this.btnbilgi.Location = new System.Drawing.Point(804, 394);
+            this.btnbilgi.Name = "btnbilgi";
+            this.btnbilgi.Size = new System.Drawing.Size(278, 97);
+            this.btnbilgi.TabIndex = 4;
+            this.btnbilgi.Text = "Ödeme Bilgilerim";
+            this.btnbilgi.UseVisualStyleBackColor = true;
+            this.btnbilgi.Click += new System.EventHandler(this.btnbilgi_Click);
+            // 
             // Siparislerim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1195, 744);
+            this.Controls.Add(this.btnbilgi);
+            this.Controls.Add(this.button1_);
             this.Controls.Add(this.btnanageridon);
-            this.Controls.Add(this.lisstsiparislerim);
+            this.Controls.Add(this.listViewSiparisler);
             this.Controls.Add(this.lblsiparişlerim);
             this.Name = "Siparislerim";
             this.Text = "Siparislerim";
+            this.Load += new System.EventHandler(this.Siparislerim_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -91,11 +129,12 @@ namespace SiparisOtomasyonu
         #endregion
 
         private System.Windows.Forms.Label lblsiparişlerim;
-        private System.Windows.Forms.ListView lisstsiparislerim;
+        private System.Windows.Forms.ListView listViewSiparisler;
         private System.Windows.Forms.Button btnanageridon;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader stntarih;
+        private System.Windows.Forms.ColumnHeader stnDurum;
+        private System.Windows.Forms.Button button1_;
+        private System.Windows.Forms.ColumnHeader stnSiparisID;
+        public System.Windows.Forms.Button btnbilgi;
     }
 }

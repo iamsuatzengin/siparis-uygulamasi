@@ -14,7 +14,7 @@ namespace SiparisOtomasyonu
     public partial class UrunEklemeForm : Form
     {
         SqlBaglanti baglanti = new SqlBaglanti();
-        Urun urun = new Urun();
+        SiparisDetayi urun = new SiparisDetayi();
         public ListView listView;
         public int id;
         public bool nereden; // true -> Güncelleme butonundan geleni ifade eder.
@@ -36,8 +36,8 @@ namespace SiparisOtomasyonu
                 urun.urunAdi = tbUrunAdi.Text;
                 urun.urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 urun.urunAdeti = Convert.ToInt32(tbUrunAdet.Text);
-                urun.urunFiyati = float.Parse(tbUrunFiyat.Text);
-                urun.urunFiyati = Math.Round(urun.urunFiyati, 2);
+                urun.urunFiyati = Convert.ToDecimal(tbUrunFiyat.Text);
+                ;
 
                 urun.urunGuncelle(this.id);
                 listView.Items.Clear();
@@ -48,8 +48,8 @@ namespace SiparisOtomasyonu
                 string urunAdi = tbUrunAdi.Text;
                 int urunMiktari = Convert.ToInt32(tbUrunMiktari.Text);
                 int urunAdedi = Convert.ToInt32(tbUrunAdet.Text);
-                double urunFiyat = float.Parse(tbUrunFiyat.Text);
-                urunFiyat = Math.Round(urunFiyat, 2); ;
+                decimal urunFiyat = Convert.ToDecimal(tbUrunFiyat.Text);
+                
 
                 urun.urunAdi = urunAdi;
                 urun.urunMiktari = urunMiktari;
