@@ -53,7 +53,6 @@ namespace SiparisOtomasyonu
             this.nakit = new System.Windows.Forms.TabPage();
             this.btnNakitileTamamla = new System.Windows.Forms.Button();
             this.lblTutar = new System.Windows.Forms.Label();
-            this.tbTutar = new System.Windows.Forms.TextBox();
             this.btnDevamEt = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -143,7 +142,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblCvc.AutoSize = true;
             this.lblCvc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCvc.Location = new System.Drawing.Point(156, 173);
+            this.lblCvc.Location = new System.Drawing.Point(137, 173);
             this.lblCvc.Name = "lblCvc";
             this.lblCvc.Size = new System.Drawing.Size(53, 20);
             this.lblCvc.TabIndex = 5;
@@ -153,7 +152,7 @@ namespace SiparisOtomasyonu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(25, 119);
+            this.label2.Location = new System.Drawing.Point(6, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(184, 20);
             this.label2.TabIndex = 4;
@@ -163,7 +162,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblKartNo.AutoSize = true;
             this.lblKartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKartNo.Location = new System.Drawing.Point(130, 69);
+            this.lblKartNo.Location = new System.Drawing.Point(111, 69);
             this.lblKartNo.Name = "lblKartNo";
             this.lblKartNo.Size = new System.Drawing.Size(79, 20);
             this.lblKartNo.TabIndex = 3;
@@ -259,7 +258,6 @@ namespace SiparisOtomasyonu
             // 
             this.nakit.Controls.Add(this.btnNakitileTamamla);
             this.nakit.Controls.Add(this.lblTutar);
-            this.nakit.Controls.Add(this.tbTutar);
             this.nakit.Location = new System.Drawing.Point(4, 25);
             this.nakit.Name = "nakit";
             this.nakit.Padding = new System.Windows.Forms.Padding(3);
@@ -282,18 +280,11 @@ namespace SiparisOtomasyonu
             // 
             this.lblTutar.AutoSize = true;
             this.lblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTutar.Location = new System.Drawing.Point(91, 106);
+            this.lblTutar.Location = new System.Drawing.Point(28, 132);
             this.lblTutar.Name = "lblTutar";
-            this.lblTutar.Size = new System.Drawing.Size(53, 20);
+            this.lblTutar.Size = new System.Drawing.Size(401, 20);
             this.lblTutar.TabIndex = 1;
-            this.lblTutar.Text = "Tutar:";
-            // 
-            // tbTutar
-            // 
-            this.tbTutar.Location = new System.Drawing.Point(168, 104);
-            this.tbTutar.Name = "tbTutar";
-            this.tbTutar.Size = new System.Drawing.Size(268, 22);
-            this.tbTutar.TabIndex = 0;
+            this.lblTutar.Text = "Ödemeniz, kapıda ödeme olarak gerçekleştirilecektir.";
             // 
             // btnDevamEt
             // 
@@ -301,7 +292,7 @@ namespace SiparisOtomasyonu
             this.btnDevamEt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnDevamEt.Location = new System.Drawing.Point(405, 619);
             this.btnDevamEt.Name = "btnDevamEt";
-            this.btnDevamEt.Size = new System.Drawing.Size(204, 48);
+            this.btnDevamEt.Size = new System.Drawing.Size(204, 61);
             this.btnDevamEt.TabIndex = 4;
             this.btnDevamEt.Text = "Alışverişe Devam Et";
             this.btnDevamEt.UseVisualStyleBackColor = false;
@@ -372,7 +363,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.TextBox tbCekAdi;
         private System.Windows.Forms.TabPage nakit;
         private System.Windows.Forms.Label lblTutar;
-        private System.Windows.Forms.TextBox tbTutar;
         private System.Windows.Forms.Button btnTamamla;
         private System.Windows.Forms.Button btnDevamEt;
         private System.Windows.Forms.Button btnNakitileTamamla;

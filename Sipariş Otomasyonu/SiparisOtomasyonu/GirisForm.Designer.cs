@@ -101,7 +101,7 @@ namespace SiparisOtomasyonu
             this.rbYoneticiGiris.AutoSize = true;
             this.rbYoneticiGiris.BackColor = System.Drawing.Color.Transparent;
             this.rbYoneticiGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbYoneticiGiris.Location = new System.Drawing.Point(172, 129);
+            this.rbYoneticiGiris.Location = new System.Drawing.Point(123, 129);
             this.rbYoneticiGiris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbYoneticiGiris.Name = "rbYoneticiGiris";
             this.rbYoneticiGiris.Size = new System.Drawing.Size(97, 24);
@@ -140,7 +140,7 @@ namespace SiparisOtomasyonu
             this.lblKullaniciAdi.AutoSize = true;
             this.lblKullaniciAdi.BackColor = System.Drawing.Color.Transparent;
             this.lblKullaniciAdi.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullaniciAdi.Location = new System.Drawing.Point(37, 177);
+            this.lblKullaniciAdi.Location = new System.Drawing.Point(10, 175);
             this.lblKullaniciAdi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKullaniciAdi.Name = "lblKullaniciAdi";
             this.lblKullaniciAdi.Size = new System.Drawing.Size(120, 20);
@@ -151,10 +151,10 @@ namespace SiparisOtomasyonu
             // 
             this.btnGiris.BackColor = System.Drawing.Color.White;
             this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGiris.Location = new System.Drawing.Point(280, 292);
+            this.btnGiris.Location = new System.Drawing.Point(268, 292);
             this.btnGiris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGiris.Name = "btnGiris";
-            this.btnGiris.Size = new System.Drawing.Size(100, 28);
+            this.btnGiris.Size = new System.Drawing.Size(112, 46);
             this.btnGiris.TabIndex = 2;
             this.btnGiris.Text = "Giriş Yap";
             this.btnGiris.UseVisualStyleBackColor = false;
@@ -197,11 +197,11 @@ namespace SiparisOtomasyonu
             this.groupBoxKayit.Controls.Add(this.tbSoyad);
             this.groupBoxKayit.Controls.Add(this.tbAd);
             this.groupBoxKayit.Controls.Add(this.lblKayit);
-            this.groupBoxKayit.Location = new System.Drawing.Point(725, 179);
+            this.groupBoxKayit.Location = new System.Drawing.Point(717, 179);
             this.groupBoxKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBoxKayit.Name = "groupBoxKayit";
             this.groupBoxKayit.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBoxKayit.Size = new System.Drawing.Size(426, 418);
+            this.groupBoxKayit.Size = new System.Drawing.Size(434, 418);
             this.groupBoxKayit.TabIndex = 1;
             this.groupBoxKayit.TabStop = false;
             // 
@@ -209,7 +209,7 @@ namespace SiparisOtomasyonu
             // 
             this.tbMusteri.AutoSize = true;
             this.tbMusteri.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.tbMusteri.Location = new System.Drawing.Point(231, 95);
+            this.tbMusteri.Location = new System.Drawing.Point(266, 88);
             this.tbMusteri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbMusteri.Name = "tbMusteri";
             this.tbMusteri.Size = new System.Drawing.Size(93, 24);
@@ -223,7 +223,7 @@ namespace SiparisOtomasyonu
             // 
             this.rbYonetici.AutoSize = true;
             this.rbYonetici.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.rbYonetici.Location = new System.Drawing.Point(139, 95);
+            this.rbYonetici.Location = new System.Drawing.Point(114, 88);
             this.rbYonetici.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.rbYonetici.Name = "rbYonetici";
             this.rbYonetici.Size = new System.Drawing.Size(97, 24);
@@ -237,7 +237,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblTelefonKayit.AutoSize = true;
             this.lblTelefonKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTelefonKayit.Location = new System.Drawing.Point(54, 251);
+            this.lblTelefonKayit.Location = new System.Drawing.Point(46, 244);
             this.lblTelefonKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefonKayit.Name = "lblTelefonKayit";
             this.lblTelefonKayit.Size = new System.Drawing.Size(77, 20);
@@ -246,7 +246,7 @@ namespace SiparisOtomasyonu
             // 
             // tbTelefon
             // 
-            this.tbTelefon.Location = new System.Drawing.Point(139, 249);
+            this.tbTelefon.Location = new System.Drawing.Point(156, 242);
             this.tbTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbTelefon.Name = "tbTelefon";
             this.tbTelefon.Size = new System.Drawing.Size(220, 22);
@@ -256,7 +256,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblSifreKayit.AutoSize = true;
             this.lblSifreKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSifreKayit.Location = new System.Drawing.Point(76, 312);
+            this.lblSifreKayit.Location = new System.Drawing.Point(68, 305);
             this.lblSifreKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSifreKayit.Name = "lblSifreKayit";
             this.lblSifreKayit.Size = new System.Drawing.Size(55, 20);
@@ -267,7 +267,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblKullaniciAdiKayit.AutoSize = true;
             this.lblKullaniciAdiKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(19, 283);
+            this.lblKullaniciAdiKayit.Location = new System.Drawing.Point(11, 276);
             this.lblKullaniciAdiKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKullaniciAdiKayit.Name = "lblKullaniciAdiKayit";
             this.lblKullaniciAdiKayit.Size = new System.Drawing.Size(120, 20);
@@ -278,7 +278,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblAdresKayit.AutoSize = true;
             this.lblAdresKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdresKayit.Location = new System.Drawing.Point(67, 214);
+            this.lblAdresKayit.Location = new System.Drawing.Point(59, 207);
             this.lblAdresKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdresKayit.Name = "lblAdresKayit";
             this.lblAdresKayit.Size = new System.Drawing.Size(64, 20);
@@ -289,7 +289,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblSoyadKayit.AutoSize = true;
             this.lblSoyadKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSoyadKayit.Location = new System.Drawing.Point(65, 184);
+            this.lblSoyadKayit.Location = new System.Drawing.Point(57, 177);
             this.lblSoyadKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSoyadKayit.Name = "lblSoyadKayit";
             this.lblSoyadKayit.Size = new System.Drawing.Size(66, 20);
@@ -300,7 +300,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblAdKayit.AutoSize = true;
             this.lblAdKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdKayit.Location = new System.Drawing.Point(94, 149);
+            this.lblAdKayit.Location = new System.Drawing.Point(86, 142);
             this.lblAdKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAdKayit.Name = "lblAdKayit";
             this.lblAdKayit.Size = new System.Drawing.Size(37, 20);
@@ -311,10 +311,10 @@ namespace SiparisOtomasyonu
             // 
             this.btnKayitOl.BackColor = System.Drawing.Color.White;
             this.btnKayitOl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKayitOl.Location = new System.Drawing.Point(236, 358);
+            this.btnKayitOl.Location = new System.Drawing.Point(266, 352);
             this.btnKayitOl.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnKayitOl.Name = "btnKayitOl";
-            this.btnKayitOl.Size = new System.Drawing.Size(100, 28);
+            this.btnKayitOl.Size = new System.Drawing.Size(110, 41);
             this.btnKayitOl.TabIndex = 11;
             this.btnKayitOl.Text = "Kayıt Ol";
             this.btnKayitOl.UseVisualStyleBackColor = false;
@@ -322,7 +322,7 @@ namespace SiparisOtomasyonu
             // 
             // tbSifreKayit
             // 
-            this.tbSifreKayit.Location = new System.Drawing.Point(139, 310);
+            this.tbSifreKayit.Location = new System.Drawing.Point(156, 303);
             this.tbSifreKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSifreKayit.Name = "tbSifreKayit";
             this.tbSifreKayit.Size = new System.Drawing.Size(220, 22);
@@ -331,7 +331,7 @@ namespace SiparisOtomasyonu
             // 
             // tbKullaniciAdiKayit
             // 
-            this.tbKullaniciAdiKayit.Location = new System.Drawing.Point(139, 280);
+            this.tbKullaniciAdiKayit.Location = new System.Drawing.Point(156, 273);
             this.tbKullaniciAdiKayit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbKullaniciAdiKayit.Name = "tbKullaniciAdiKayit";
             this.tbKullaniciAdiKayit.Size = new System.Drawing.Size(220, 22);
@@ -339,7 +339,7 @@ namespace SiparisOtomasyonu
             // 
             // tbAdres
             // 
-            this.tbAdres.Location = new System.Drawing.Point(139, 212);
+            this.tbAdres.Location = new System.Drawing.Point(156, 205);
             this.tbAdres.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbAdres.Name = "tbAdres";
             this.tbAdres.Size = new System.Drawing.Size(220, 22);
@@ -347,7 +347,7 @@ namespace SiparisOtomasyonu
             // 
             // tbSoyad
             // 
-            this.tbSoyad.Location = new System.Drawing.Point(139, 182);
+            this.tbSoyad.Location = new System.Drawing.Point(156, 175);
             this.tbSoyad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbSoyad.Name = "tbSoyad";
             this.tbSoyad.Size = new System.Drawing.Size(220, 22);
@@ -355,7 +355,7 @@ namespace SiparisOtomasyonu
             // 
             // tbAd
             // 
-            this.tbAd.Location = new System.Drawing.Point(139, 147);
+            this.tbAd.Location = new System.Drawing.Point(156, 140);
             this.tbAd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbAd.Name = "tbAd";
             this.tbAd.Size = new System.Drawing.Size(220, 22);
@@ -365,7 +365,7 @@ namespace SiparisOtomasyonu
             // 
             this.lblKayit.AutoSize = true;
             this.lblKayit.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKayit.Location = new System.Drawing.Point(148, 19);
+            this.lblKayit.Location = new System.Drawing.Point(131, 19);
             this.lblKayit.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKayit.Name = "lblKayit";
             this.lblKayit.Size = new System.Drawing.Size(176, 48);
@@ -379,11 +379,11 @@ namespace SiparisOtomasyonu
             this.lbSİTEADI.BackColor = System.Drawing.Color.Transparent;
             this.lbSİTEADI.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.lbSİTEADI.ForeColor = System.Drawing.Color.Black;
-            this.lbSİTEADI.Location = new System.Drawing.Point(379, 38);
+            this.lbSİTEADI.Location = new System.Drawing.Point(462, 65);
             this.lbSİTEADI.Name = "lbSİTEADI";
-            this.lbSİTEADI.Size = new System.Drawing.Size(693, 69);
+            this.lbSİTEADI.Size = new System.Drawing.Size(483, 69);
             this.lbSİTEADI.TabIndex = 2;
-            this.lbSİTEADI.Text = "ROJİN\'İ ÇOK SEVİYOM";
+            this.lbSİTEADI.Text = "LEZZET DİYARI";
             // 
             // GirisForm
             // 

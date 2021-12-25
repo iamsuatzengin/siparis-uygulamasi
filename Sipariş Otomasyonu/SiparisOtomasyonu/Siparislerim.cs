@@ -88,11 +88,11 @@ namespace SiparisOtomasyonu
         {
             if (odemeSekli)
             {
-                MessageBox.Show("Kart No: " + krediKartBilgileri.Numara + "\nSKT" + krediKartBilgileri.SKT + "\nCVC" + krediKartBilgileri.CVC);
+                MessageBox.Show("Kart No: " + krediKartBilgileri.Numara + "\nSKT: " + krediKartBilgileri.SKT + "\nCVC: " + krediKartBilgileri.CVC);
             }
             else
             {
-                MessageBox.Show("Adı:" + cekbilgikeri.Adi + "\nBanka ID" + cekbilgikeri.BankaID);
+                MessageBox.Show("Adı: " + cekbilgikeri.Adi + "\nBanka ID: " + cekbilgikeri.BankaID);
             }
         }
 

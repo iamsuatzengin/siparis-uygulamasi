@@ -79,10 +79,10 @@ namespace SiparisOtomasyonu
             this.btnMusteriListe.BackColor = System.Drawing.Color.White;
             this.btnMusteriListe.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnMusteriListe.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnMusteriListe.Location = new System.Drawing.Point(40, 634);
+            this.btnMusteriListe.Location = new System.Drawing.Point(13, 622);
             this.btnMusteriListe.Margin = new System.Windows.Forms.Padding(4);
             this.btnMusteriListe.Name = "btnMusteriListe";
-            this.btnMusteriListe.Size = new System.Drawing.Size(297, 53);
+            this.btnMusteriListe.Size = new System.Drawing.Size(213, 53);
             this.btnMusteriListe.TabIndex = 0;
             this.btnMusteriListe.Text = "Müşteri Listesi";
             this.btnMusteriListe.UseVisualStyleBackColor = false;
