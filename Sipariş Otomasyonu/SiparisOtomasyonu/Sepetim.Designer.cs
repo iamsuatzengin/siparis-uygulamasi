@@ -29,7 +29,7 @@ namespace SiparisOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Sepetim));
             this.listViewSepet = new System.Windows.Forms.ListView();
             this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunMiktari = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -51,25 +51,19 @@ namespace SiparisOtomasyonu
             this.lblCekAdi = new System.Windows.Forms.Label();
             this.tbCekAdi = new System.Windows.Forms.TextBox();
             this.nakit = new System.Windows.Forms.TabPage();
+            this.btnNakitileTamamla = new System.Windows.Forms.Button();
             this.lblTutar = new System.Windows.Forms.Label();
             this.tbTutar = new System.Windows.Forms.TextBox();
-            this.btnNakitileTamamla = new System.Windows.Forms.Button();
             this.btnDevamEt = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.tcOdeme.SuspendLayout();
             this.krediKart.SuspendLayout();
             this.cek.SuspendLayout();
             this.nakit.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(486, 56);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(206, 57);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Sepetim";
             // 
             // listViewSepet
             // 
@@ -148,41 +142,43 @@ namespace SiparisOtomasyonu
             // lblCvc
             // 
             this.lblCvc.AutoSize = true;
-            this.lblCvc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblCvc.Location = new System.Drawing.Point(140, 173);
+            this.lblCvc.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblCvc.Location = new System.Drawing.Point(156, 173);
             this.lblCvc.Name = "lblCvc";
-            this.lblCvc.Size = new System.Drawing.Size(49, 20);
+            this.lblCvc.Size = new System.Drawing.Size(53, 20);
             this.lblCvc.TabIndex = 5;
             this.lblCvc.Text = "CVC:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(25, 119);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(164, 20);
+            this.label2.Size = new System.Drawing.Size(184, 20);
             this.label2.TabIndex = 4;
             this.label2.Text = "Son Kullanma Tarihi:";
             // 
             // lblKartNo
             // 
             this.lblKartNo.AutoSize = true;
-            this.lblKartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKartNo.Location = new System.Drawing.Point(118, 69);
+            this.lblKartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKartNo.Location = new System.Drawing.Point(130, 69);
             this.lblKartNo.Name = "lblKartNo";
-            this.lblKartNo.Size = new System.Drawing.Size(71, 20);
+            this.lblKartNo.Size = new System.Drawing.Size(79, 20);
             this.lblKartNo.TabIndex = 3;
             this.lblKartNo.Text = "Kart No:";
             // 
             // btnTamamla
             // 
-            this.btnTamamla.Location = new System.Drawing.Point(347, 226);
+            this.btnTamamla.BackColor = System.Drawing.Color.White;
+            this.btnTamamla.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTamamla.Location = new System.Drawing.Point(270, 226);
             this.btnTamamla.Name = "btnTamamla";
-            this.btnTamamla.Size = new System.Drawing.Size(150, 44);
+            this.btnTamamla.Size = new System.Drawing.Size(227, 44);
             this.btnTamamla.TabIndex = 3;
             this.btnTamamla.Text = "Alışverişi Tamamla";
-            this.btnTamamla.UseVisualStyleBackColor = true;
+            this.btnTamamla.UseVisualStyleBackColor = false;
             this.btnTamamla.Click += new System.EventHandler(this.btnTamamla_Click);
             // 
             // tbCvc
@@ -272,6 +268,16 @@ namespace SiparisOtomasyonu
             this.nakit.Text = "Nakit";
             this.nakit.UseVisualStyleBackColor = true;
             // 
+            // btnNakitileTamamla
+            // 
+            this.btnNakitileTamamla.Location = new System.Drawing.Point(319, 210);
+            this.btnNakitileTamamla.Name = "btnNakitileTamamla";
+            this.btnNakitileTamamla.Size = new System.Drawing.Size(150, 44);
+            this.btnNakitileTamamla.TabIndex = 5;
+            this.btnNakitileTamamla.Text = "Alışverişi Tamamla";
+            this.btnNakitileTamamla.UseVisualStyleBackColor = true;
+            this.btnNakitileTamamla.Click += new System.EventHandler(this.btnNakitileTamamla_Click);
+            // 
             // lblTutar
             // 
             this.lblTutar.AutoSize = true;
@@ -289,35 +295,51 @@ namespace SiparisOtomasyonu
             this.tbTutar.Size = new System.Drawing.Size(268, 22);
             this.tbTutar.TabIndex = 0;
             // 
-            // btnNakitileTamamla
-            // 
-            this.btnNakitileTamamla.Location = new System.Drawing.Point(319, 210);
-            this.btnNakitileTamamla.Name = "btnNakitileTamamla";
-            this.btnNakitileTamamla.Size = new System.Drawing.Size(150, 44);
-            this.btnNakitileTamamla.TabIndex = 5;
-            this.btnNakitileTamamla.Text = "Alışverişi Tamamla";
-            this.btnNakitileTamamla.UseVisualStyleBackColor = true;
-            this.btnNakitileTamamla.Click += new System.EventHandler(this.btnNakitileTamamla_Click);
-            // 
             // btnDevamEt
             // 
-            this.btnDevamEt.Location = new System.Drawing.Point(434, 632);
+            this.btnDevamEt.BackColor = System.Drawing.Color.White;
+            this.btnDevamEt.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnDevamEt.Location = new System.Drawing.Point(405, 619);
             this.btnDevamEt.Name = "btnDevamEt";
-            this.btnDevamEt.Size = new System.Drawing.Size(175, 42);
+            this.btnDevamEt.Size = new System.Drawing.Size(204, 48);
             this.btnDevamEt.TabIndex = 4;
             this.btnDevamEt.Text = "Alışverişe Devam Et";
-            this.btnDevamEt.UseVisualStyleBackColor = true;
+            this.btnDevamEt.UseVisualStyleBackColor = false;
             this.btnDevamEt.Click += new System.EventHandler(this.btnDevamEt_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(684, 515);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(434, 88);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(23, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(284, 126);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // Sepetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1206, 749);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnDevamEt);
             this.Controls.Add(this.tcOdeme);
             this.Controls.Add(this.listViewSepet);
-            this.Controls.Add(this.label1);
             this.Name = "Sepetim";
             this.Text = "Sepetim";
             this.Load += new System.EventHandler(this.Sepetim_Load);
@@ -328,14 +350,13 @@ namespace SiparisOtomasyonu
             this.cek.PerformLayout();
             this.nakit.ResumeLayout(false);
             this.nakit.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListView listViewSepet;
         private System.Windows.Forms.TabControl tcOdeme;
         private System.Windows.Forms.TabPage krediKart;
@@ -361,5 +382,7 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.ColumnHeader stnUrunAdedi;
         private System.Windows.Forms.ColumnHeader stnToplamFiyat;
         private System.Windows.Forms.TextBox tarih;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

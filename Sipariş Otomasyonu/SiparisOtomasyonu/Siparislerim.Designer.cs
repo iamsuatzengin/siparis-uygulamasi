@@ -29,6 +29,7 @@ namespace SiparisOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Siparislerim));
             this.lblsiparişlerim = new System.Windows.Forms.Label();
             this.listViewSiparisler = new System.Windows.Forms.ListView();
             this.stnSiparisID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,17 +38,20 @@ namespace SiparisOtomasyonu
             this.btnanageridon = new System.Windows.Forms.Button();
             this.button1_ = new System.Windows.Forms.Button();
             this.btnbilgi = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblsiparişlerim
             // 
             this.lblsiparişlerim.AutoSize = true;
-            this.lblsiparişlerim.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblsiparişlerim.Location = new System.Drawing.Point(452, 39);
+            this.lblsiparişlerim.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblsiparişlerim.ForeColor = System.Drawing.Color.White;
+            this.lblsiparişlerim.Location = new System.Drawing.Point(156, 30);
             this.lblsiparişlerim.Name = "lblsiparişlerim";
-            this.lblsiparişlerim.Size = new System.Drawing.Size(228, 46);
+            this.lblsiparişlerim.Size = new System.Drawing.Size(462, 69);
             this.lblsiparişlerim.TabIndex = 0;
-            this.lblsiparişlerim.Text = "Siparişlerim";
+            this.lblsiparişlerim.Text = "SİPARİŞLERİM";
             // 
             // listViewSiparisler
             // 
@@ -80,39 +84,57 @@ namespace SiparisOtomasyonu
             // 
             // btnanageridon
             // 
-            this.btnanageridon.Location = new System.Drawing.Point(450, 604);
+            this.btnanageridon.BackColor = System.Drawing.Color.White;
+            this.btnanageridon.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnanageridon.Location = new System.Drawing.Point(430, 605);
             this.btnanageridon.Name = "btnanageridon";
-            this.btnanageridon.Size = new System.Drawing.Size(230, 77);
+            this.btnanageridon.Size = new System.Drawing.Size(280, 71);
             this.btnanageridon.TabIndex = 2;
-            this.btnanageridon.Text = "Ana Menü Geri Dön";
-            this.btnanageridon.UseVisualStyleBackColor = true;
+            this.btnanageridon.Text = "Ana Menüye Dön";
+            this.btnanageridon.UseVisualStyleBackColor = false;
             this.btnanageridon.Click += new System.EventHandler(this.btnanageridon_Click);
             // 
             // button1_
             // 
-            this.button1_.Location = new System.Drawing.Point(804, 168);
+            this.button1_.BackColor = System.Drawing.Color.White;
+            this.button1_.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1_.Location = new System.Drawing.Point(841, 149);
             this.button1_.Name = "button1_";
             this.button1_.Size = new System.Drawing.Size(278, 99);
             this.button1_.TabIndex = 3;
             this.button1_.Text = "Sipariş Detayı";
-            this.button1_.UseVisualStyleBackColor = true;
+            this.button1_.UseVisualStyleBackColor = false;
             this.button1_.Click += new System.EventHandler(this.btnDetay_Click);
             // 
             // btnbilgi
             // 
-            this.btnbilgi.Location = new System.Drawing.Point(804, 394);
+            this.btnbilgi.BackColor = System.Drawing.Color.White;
+            this.btnbilgi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnbilgi.Location = new System.Drawing.Point(841, 316);
             this.btnbilgi.Name = "btnbilgi";
             this.btnbilgi.Size = new System.Drawing.Size(278, 97);
             this.btnbilgi.TabIndex = 4;
             this.btnbilgi.Text = "Ödeme Bilgilerim";
-            this.btnbilgi.UseVisualStyleBackColor = true;
+            this.btnbilgi.UseVisualStyleBackColor = false;
             this.btnbilgi.Click += new System.EventHandler(this.btnbilgi_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(786, 470);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(358, 206);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // Siparislerim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1195, 744);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnbilgi);
             this.Controls.Add(this.button1_);
             this.Controls.Add(this.btnanageridon);
@@ -121,6 +143,7 @@ namespace SiparisOtomasyonu
             this.Name = "Siparislerim";
             this.Text = "Siparislerim";
             this.Load += new System.EventHandler(this.Siparislerim_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -136,5 +159,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.Button button1_;
         private System.Windows.Forms.ColumnHeader stnSiparisID;
         public System.Windows.Forms.Button btnbilgi;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

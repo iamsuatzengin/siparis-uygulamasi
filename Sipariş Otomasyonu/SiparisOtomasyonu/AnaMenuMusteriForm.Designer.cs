@@ -29,7 +29,7 @@ namespace SiparisOtomasyonu
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblAnaMenu = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenuMusteriForm));
             this.listViewUrunler = new System.Windows.Forms.ListView();
             this.stnID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.stnUrunAdi = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,18 +39,9 @@ namespace SiparisOtomasyonu
             this.btnSiparislerim = new System.Windows.Forms.Button();
             this.btnSepeteEkle = new System.Windows.Forms.Button();
             this.btnSepetim = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblAnaMenu
-            // 
-            this.lblAnaMenu.AutoSize = true;
-            this.lblAnaMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 29F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAnaMenu.Location = new System.Drawing.Point(509, 30);
-            this.lblAnaMenu.Name = "lblAnaMenu";
-            this.lblAnaMenu.Size = new System.Drawing.Size(247, 57);
-            this.lblAnaMenu.TabIndex = 0;
-            this.lblAnaMenu.Text = "Ana Menü";
-            this.lblAnaMenu.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // listViewUrunler
             // 
@@ -62,7 +53,7 @@ namespace SiparisOtomasyonu
             this.stnUrunFiyati});
             this.listViewUrunler.FullRowSelect = true;
             this.listViewUrunler.HideSelection = false;
-            this.listViewUrunler.Location = new System.Drawing.Point(335, 106);
+            this.listViewUrunler.Location = new System.Drawing.Point(324, 69);
             this.listViewUrunler.Name = "listViewUrunler";
             this.listViewUrunler.Size = new System.Drawing.Size(905, 552);
             this.listViewUrunler.TabIndex = 1;
@@ -96,56 +87,74 @@ namespace SiparisOtomasyonu
             // 
             // btnSiparislerim
             // 
-            this.btnSiparislerim.Location = new System.Drawing.Point(56, 106);
+            this.btnSiparislerim.BackColor = System.Drawing.Color.White;
+            this.btnSiparislerim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSiparislerim.Location = new System.Drawing.Point(58, 435);
             this.btnSiparislerim.Name = "btnSiparislerim";
-            this.btnSiparislerim.Size = new System.Drawing.Size(174, 44);
+            this.btnSiparislerim.Size = new System.Drawing.Size(218, 70);
             this.btnSiparislerim.TabIndex = 2;
             this.btnSiparislerim.Text = "Siparişlerim";
-            this.btnSiparislerim.UseVisualStyleBackColor = true;
+            this.btnSiparislerim.UseVisualStyleBackColor = false;
             this.btnSiparislerim.Click += new System.EventHandler(this.btnSiparislerim_Click);
             // 
             // btnSepeteEkle
             // 
-            this.btnSepeteEkle.Location = new System.Drawing.Point(1114, 677);
+            this.btnSepeteEkle.BackColor = System.Drawing.Color.White;
+            this.btnSepeteEkle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSepeteEkle.ForeColor = System.Drawing.Color.Black;
+            this.btnSepeteEkle.Location = new System.Drawing.Point(1011, 648);
             this.btnSepeteEkle.Name = "btnSepeteEkle";
-            this.btnSepeteEkle.Size = new System.Drawing.Size(126, 39);
+            this.btnSepeteEkle.Size = new System.Drawing.Size(218, 70);
             this.btnSepeteEkle.TabIndex = 3;
             this.btnSepeteEkle.Text = "Sepete Ekle";
-            this.btnSepeteEkle.UseVisualStyleBackColor = true;
+            this.btnSepeteEkle.UseVisualStyleBackColor = false;
             this.btnSepeteEkle.Click += new System.EventHandler(this.btnSepeteEkle_Click);
             // 
             // btnSepetim
             // 
-            this.btnSepetim.Location = new System.Drawing.Point(56, 190);
+            this.btnSepetim.BackColor = System.Drawing.Color.White;
+            this.btnSepetim.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSepetim.Location = new System.Drawing.Point(58, 551);
             this.btnSepetim.Name = "btnSepetim";
-            this.btnSepetim.Size = new System.Drawing.Size(174, 43);
+            this.btnSepetim.Size = new System.Drawing.Size(218, 70);
             this.btnSepetim.TabIndex = 4;
             this.btnSepetim.Text = "Sepetim";
-            this.btnSepetim.UseVisualStyleBackColor = true;
+            this.btnSepetim.UseVisualStyleBackColor = false;
             this.btnSepetim.Click += new System.EventHandler(this.btnSepetim_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(0, 69);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(326, 262);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 6;
+            this.pictureBox2.TabStop = false;
             // 
             // AnaMenuMusteriForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1267, 763);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btnSepetim);
             this.Controls.Add(this.btnSepeteEkle);
             this.Controls.Add(this.btnSiparislerim);
             this.Controls.Add(this.listViewUrunler);
-            this.Controls.Add(this.lblAnaMenu);
             this.Name = "AnaMenuMusteriForm";
             this.Text = "AnaMenuMusteriForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AnaMenuMusteriForm_FormClosing);
             this.Load += new System.EventHandler(this.AnaMenuMusteriForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblAnaMenu;
         private System.Windows.Forms.ListView listViewUrunler;
         private System.Windows.Forms.Button btnSiparislerim;
         private System.Windows.Forms.Button btnSepeteEkle;
@@ -155,5 +164,6 @@ namespace SiparisOtomasyonu
         private System.Windows.Forms.Button btnSepetim;
         private System.Windows.Forms.ColumnHeader stnUrunFiyati;
         private System.Windows.Forms.ColumnHeader stnID;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
